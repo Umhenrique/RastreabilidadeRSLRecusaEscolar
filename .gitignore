@@ -1,0 +1,40 @@
+# Binarios pesados e ferramentas locais de compilacao
+tools/tectonic/tectonic.exe
+tools/tectonic/tectonic.zip
+
+# PDFs de artigos de terceiros (protecao de direitos autorais)
+04_extracao_dados/pdfs/*.pdf
+
+# Bancos de dados locais e caches
+*.sqlite
+*.db
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos temporarios de compilacao LaTeX e renderizacao
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+06_sintese_relatorio/relatorio_artigo_temp.html
+06_sintese_relatorio/*.png
+
+# Estado de interface local do Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Notas pessoais de acompanhamento (mantidas apenas localmente)
+05_memoria_projeto/diario_de_bordo.md
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.env

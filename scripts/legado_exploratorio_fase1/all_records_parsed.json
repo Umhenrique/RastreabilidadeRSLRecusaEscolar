@@ -1,0 +1,72 @@
+[
+  {
+    "Source_Database": "ACM DL",
+    "Original_ID": "10.1145/3357729.3357758",
+    "Entry_Type": "inproceedings",
+    "Source_File": "acm (1).bib",
+    "Title": "Reducing School Absenteeism - Promoting Health",
+    "Authors": "Rubinstein, Barbara",
+    "Year": "2019",
+    "Abstract": "Education is crucial to social and economic development and has a profound impact on population health. The health benefits of education accrue at the individual level, the community level and at the national level. School absenteeism is a major concern, which has long-term consequences on the individual level and societal level. We present initial findings from a project which addresses the challenge of school absenteeism through an improved use of data and proactive interventions. In doing so we aim to contribute towards reaching several of the global goals in Agenda 2030. The school system in Gothenburg, Sweden, has been assigned the task of raising school attendance levels as a means of achieving academic goals and improving students' health. The present project is carried out in Angered, one of ten urban districts in Gothenburg. Angered faces great challenges regarding segregation and social exclusion, why the question of school absenteeism is an especially important issue in this area. The district administration Angered joined forces with several partners from academia and commercial actors to address this important issue. The intention is to proactively promote school attendance, instead of only taking measures when the students are already absent. One of the solutions is a digital tool that uses data related to student attendance, and, using machine learning, predicts presence and absence of any individual student. We are also exploring opportunities to develop a process of collecting questionnaire data from students using a mobile-app, which can also improve the predictions of the machine learning system. The mobile-app will also provide data that increases the understanding of the needs of students, and make schools better equipped to tailor successful interventions. We also plan for a digital action toolbox, that includes suggestions for actions that schools can use to increase the school attendance. Furthermore, the analysis of the data can provide us with better understanding of health needs of young people and a better understanding of school environment.",
+    "DOI": "10.1145/3357729.3357758",
+    "URL": "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3357729.3357758",
+    "Venue": "Proceedings of the 9th International Conference on Digital Public Health",
+    "Keywords": ""
+  },
+  {
+    "Source_Database": "ACM DL",
+    "Original_ID": "10.1145/3705724",
+    "Entry_Type": "article",
+    "Source_File": "acm (1).bib",
+    "Title": "Explainable Artificial Intelligence: Importance, Use Domains, Stages, Output Shapes, and Challenges",
+    "Authors": "Ullah, Naeem and Khan, Javed Ali and De Falco, Ivanoe and Sannino, Giovanna",
+    "Year": "2024",
+    "Abstract": "There is an urgent need in many application areas for eXplainable ArtificiaI Intelligence (XAI) approaches to boost people’s confidence and trust in Artificial Intelligence methods. Current works concentrate on specific aspects of XAI and avoid a comprehensive perspective. This study undertakes a systematic survey of importance, approaches, methods, and application domains to address this gap and provide a comprehensive understanding of the XAI domain. Applying the Systematic Literature Review approach has resulted in finding and discussing 155 papers, allowing a wide discussion on the strengths, limitations, and challenges of XAI methods and future research directions.",
+    "DOI": "10.1145/3705724",
+    "URL": "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3705724",
+    "Venue": "ACM Comput. Surv.",
+    "Keywords": "Explainable Artificial Intelligence, literature review"
+  },
+  {
+    "Source_Database": "ACM DL",
+    "Original_ID": "10.1145/3833541",
+    "Entry_Type": "proceedings",
+    "Source_File": "acm (1).bib",
+    "Title": "DSAI '26: Proceedings of the 2026 3rd International Conference on Digital Society and Artificial Intelligence",
+    "Authors": "",
+    "Year": "2026",
+    "Abstract": "",
+    "DOI": "",
+    "URL": "",
+    "Venue": "",
+    "Keywords": ""
+  },
+  {
+    "Source_Database": "ACM DL",
+    "Original_ID": "10.1145/3785022",
+    "Entry_Type": "proceedings",
+    "Source_File": "acm (1).bib",
+    "Title": "LAK '26: Proceedings of the LAK26: 16th International Learning Analytics and Knowledge Conference",
+    "Authors": "",
+    "Year": "2026",
+    "Abstract": "",
+    "DOI": "",
+    "URL": "",
+    "Venue": "",
+    "Keywords": ""
+  },
+  {
+    "Source_Database": "ACM DL",
+    "Original_ID": "10.1145/3672758.3672776",
+    "Entry_Type": "inproceedings",
+    "Source_File": "acm (1).bib",
+    "Title": "Text Clustering and Natural Language Processing Based Dialogue System Model for Relieving Learning Weariness",
+    "Authors": "Yu, Bo and Lu, Mingde and Shi, Yi and Lin, Juxing and Zeng, Mingjie",
+    "Year": "2024",
+    "Abstract": "Learning weariness is a common psychological problem, which will affect students' learning effect and life quality. Currently, most ways to relieve the learning weariness require the intervention of a professional counselor or teacher, but these resources are often limited or difficult to access. In order to provide a low cost, high efficiency and easy to use tool for relieving the learning weariness, this paper introduces a dialogue system model based on text clustering algorithm and natural language processing algorithm to relieve the learning weariness of students. This dialogue system model provides learning emotion assessment function, learning weariness relieving function, and self-counseling advice function for students. Among them, the learning weariness relieving function is the highlight of this system model. Text clustering algorithm is the core technology of this function, which is able to classify the corpus according to different topics and train a specialized dialogue mod-el for each topic using natural language processing algorithm. In this way, when students ask questions, the learning weariness relieving function can select the most appropriate dialogue model to generate replies according to the topic of the question, so as to improve the quality and effect of the dialogue. In this paper, BLEU value is used as the evaluation index of the dialogue model, and F1-score is used as the evaluation index of text clustering model. Experimental results show that the dialogue system model can accurately distinguish the topic of the question and generate high quality replies. Therefore, this paper plans to improve the quality of the corpus used to train the models and try other data augmentation techniques in the future.",
+    "DOI": "10.1145/3672758.3672776",
+    "URL": "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3672758.3672776",
+    "Venue": "Proceedings of the 3rd International Conference on Computer, Artificial Intelligence and Control Engineering",
+    "Keywords": ""
+  }
+]

@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\geometry{a4paper, margin=1.5cm, top=1.3cm, bottom=1.3cm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{caption}
+
+\captionsetup[table]{skip=3pt, font=small, labelfont=bf}
+\titleformat{\section}{\normalsize\bfseries\color{darkgray}}{\thesection.}{0.4em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{1.5pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black
+}
+
+\begin{document}
+
+\begin{center}
+    {\large \textbf{Relatório Técnico de Andamento de Pesquisa}}\\[2pt]
+    {\normalsize \textbf{Revisão Sistemática da Literatura (RSL) -- Diretrizes PRISMA 2020}}\\[3pt]
+    \textbf{Tema:} Identificação e Predição de Recusa Escolar na Educação Básica:\\
+    Convergência entre Instrumentos Psicométricos e Modelos de Inteligência Artificial\\[3pt]
+    \small \textbf{Pesquisador:} Matheus Henrique Assunção de Medeiros \quad$|$\quad \textbf{Programa:} PGCC UERN / UFERSA\\
+    \textbf{Data:} Outubro de 2026 \quad$|$\quad \textbf{Status:} Conclusão da Fase 1 (Triagem) e Início da Fase 2 (Extração)
+\end{center}
+
+\vspace{-6pt}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-2pt}
+
+\section{Contexto e Definição do Protocolo}
+Este relatório técnico consolida os avanços metodológicos e os dados empíricos obtidos na condução da Revisão Sistemática da Literatura (RSL). O trabalho investiga a convergência entre ferramentas computacionais baseadas em Inteligência Artificial (Machine Learning e Sistemas de Alerta Precoce) e instrumentos psicométricos voltados à detecção precoce de recusa escolar (\textit{School Refusal Behavior} / EBSA) e absenteísmo crônico na Educação Básica.
+
+
+A pesquisa foi delineada sob os preceitos metodológicos de Kitchenham e as recomendações do protocolo PRISMA 2020. A estrutura da investigação ancora-se na formulação PICOC definida no protocolo: \textbf{Population:} Ensino Básico; \textbf{Intervention:} IA (Ferramentas de diagnóstico ou diagnóstico); e \textbf{Outcomes:} Recusa escolar OR (evasão escolar AND socio-emotional factor).
+
+O enquadramento investigativo orienta-se pelas quatro questões centrais de pesquisa (RQs) do protocolo: \\
+\textbf{RQ1:} Quais são as ferramentas, escalas ou instrumentos psicométricos utilizados para diagnosticar ou rastrear a recusa escolar e o absenteísmo crônico? \\
+\textbf{RQ2:} De que forma técnicas de Inteligência Artificial, Machine Learning e análise de dados têm sido aplicadas na predição ou detecção precoce da recusa escolar? \\
+\textbf{RQ3:} Quais variáveis socioemocionais, comportamentais ou contextuais são mais frequentemente consideradas por essas ferramentas preditivas e diagnósticas? \\
+\textbf{RQ4:} Quais são as principais limitações, desafios metodológicos e métricas de avaliação relatados nos estudos ao implementar essas ferramentas?
+
+\section{Estratégia de Busca, Deduplicação e Funil de Triagem}
+As buscas sistemáticas foram executadas combinando descritores booleanos distribuídos em três eixos semânticos fundamentais via operador \texttt{AND}: \\ 
+\textbf{Fenômeno de infrequência discente} (\textit{school refusal}, \textit{school avoidance}, \textit{chronic absenteeism}, \textit{school absenteeism}, \textit{truancy}, \textit{school non-attendance}), \\
+\textbf{Dimensão socioemocional e saúde mental} (\textit{socio-emotional}, \textit{mental health}, \textit{anxiety}, \textit{depression}, \textit{bullying}, \textit{peer victimization}, \textit{psychological distress}), \\
+\textbf{Tecnologias de IA e modelos preditivos} (\textit{machine learning}, \textit{artificial intelligence}, \textit{deep learning}, \textit{predictive model}, \textit{early warning systems}, \textit{data mining}).\\
+Ressalta-se que a delimitação da população na Educação Básica (K-12) e a análise de instrumentos psicométricos (RQ1) constituem critérios de elegibilidade (IC/EC) e questões investigativas aplicadas no processo de triagem, e não termos restritivos booleanos na string canônica das bases, garantindo assim que publicações seminais não fossem omitidas por ausência da menção estrita do termo K-12 no resumo.
+
+A coleta automatizada resultou em um volume bruto de 1.552 registros científicos indexados em seis bases acadêmicas internacionais: Springer Link ($N=1.000$), ACM Digital Library ($N=198$), Scopus ($N=195$), Web of Science ($N=83$), ScienceDirect ($N=62$) e IEEE Xplore ($N=14$).
+
+Para assegurar a integridade dos dados, implementou-se uma rotina de deduplicação automatizada em linguagem Python, confrontando simultaneamente identificadores DOI e títulos normalizados por similaridade textual. O processo identificou e expurgou 81 registros redundantes inter-bases, estabelecendo um corpus único de 1.471 artigos científicos para a etapa de triagem preliminar por título e resumo (Fase 1).
+
+\vspace{1pt}
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\footnotesize
+\captionof{table}{Distribuição dos Registros Científicos por Base de Dados e Síntese da Triagem Primária (Auditada)}
+\label{tab:bases}
+\begin{tabularx}{\textwidth}{lrrrrX}
+\toprule
+\textbf{Base de Dados} & \textbf{Brutos} & \textbf{Duplicatas} & \textbf{Triados (Fase 1)} & \textbf{Incluídos (Fase 2)} & \textbf{Perfil do Conteúdo Indexado} \\
+\midrule
+\textbf{Scopus (Elsevier)} & 195 & 0 & 195 & 61 & Ampla cobertura multidisciplinar (IA, Educação e Saúde) \\
+\textbf{Springer Link} & 1.000 & 19 & 981 & 20 & Periódicos científicos e conferências internacionais \\
+\textbf{Web of Science} & 83 & 58 & 25 & 10 & Periódicos de alto impacto em Psicologia e Psiquiatria \\
+\textbf{ACM Digital Library} & 198 & 1 & 197 & 4 & \textit{Learning Analytics} e modelos inteligentes de aprendizagem \\
+\textbf{ScienceDirect (Elsevier)} & 62 & 0 & 62 & 3 & Periódicos especializados em Psiquiatria e Neurociência \\
+\textbf{IEEE Xplore} & 14 & 3 & 11 & 3 & Arquiteturas computacionais de IA, EWS e mineração de dados \\
+\midrule
+\textbf{TOTAL CONSOLIDADO} & \textbf{1.552} & \textbf{81} & \textbf{1.471} & \textbf{101} & \textbf{Corpus Oficial para Leitura de Texto Completo} \\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+\vspace{1pt}
+
+A avaliação dos 1.471 registros únicos foi conduzida sob a aplicação estrita de quatro critérios formais de inclusão (IC1 a IC4) e quatro de exclusão (EC1 a EC4). Em etapa de auditoria e controle de qualidade metodológica, foram descartados 1.370 estudos que não atendiam ao escopo investigativo: 1.299 artigos foram excluídos por tratarem exclusivamente de estudantes universitários ou desfechos sem correlação direta com absenteísmo ou sofrimento emocional (EC2), tais como estudos epidemiológicos onde a infrequência escolar atuava meramente como covariável secundária para prever desfechos toxicológicos ou clínicos alheios; e 71 correspondiam a tipos de documentos incompatíveis ou anais completos (EC1). Restaram, portanto, \textbf{101 estudos científicos aceitos para leitura de texto integral e extração de dados (Fase 2)}, representando uma taxa de seleção de 6,9\% sobre o corpus único.
+
+\section{Padrões Empíricos e Achados Preliminares Identificados no Corpus}
+A inspeção preliminar dos metadados e resumos dos 101 artigos selecionados revelou as seguintes tendências para a pesquisa.
+
+No âmbito das abordagens computacionais (RQ2), constata-se a hegemonia de algoritmos ensemble baseados em árvores de decisão (\textit{Random Forest} e variações de \textit{Gradient Boosting} como XGBoost e LightGBM) na modelagem preditiva de dados escolares tabulares. Esses modelos destacam-se no tratamento de atributos mistos (notas numéricas, frequência e variáveis demográficas) e pela capacidade intrínseca de hierarquização da importância dos atributos (\textit{feature importance}). Paralelamente, os estudos mais recentes (a partir de 2021) incorporam arquiteturas recorrentes de \textit{Deep Learning} (como LSTM) para a modelagem temporal de sequências de faltas semanais, visando antecipar trajetórias crônicas de desengajamento antes da evasão irreversível. Destaca-se também a rápida transição rumo à Explicabilidade em IA (XAI): metodologias como SHAP e LIME passaram a ser amplamente exigidas, superando a barreira dos modelos ``caixa-preta'' e permitindo que educadores compreendam a justificativa causal de cada alerta de risco emitido.
+
+No eixo psicométrico e clínico (RQ1), a literatura internacional converge fortemente em torno da escala funcional SRAS-R \hyperlink{https://sphsoutcomes.net/node/506}{(\textit{School Refusal Assessment Scale - Revised})}, desenvolvida por Kearney e Silverman. O instrumento distingue quatro motivações operantes da ausência discente: duas de natureza emocional aversiva (evitação de estímulos negativos e fuga de situações sociais avaliativas) e duas orientadas a reforço positivo fora do ambiente escolar (busca de atenção dos cuidadores e engajamento em atividades prazerosas externas). Como instrumento complementar de triagem rápida diretamente nas salas de aula, destaca-se a validação contemporânea da escala SCREEN, além do uso recorrente de questionários como o SCARED para mensurar comorbidades de ansiedade somática e fobia social.
+
+No contexto brasileiro, identifica-se no corpus o estudo de Barros et al., publicado em 2026 na prestigiada \textit{Nature Scientific Reports} (\textit{Interpretable machine learning for predicting school absenteeism at-scale in Brazil: evidence from 22,000 schools}). O trabalho evidencia que é tecnicamente viável predizer o absenteísmo escolar em larga escala no Brasil utilizando Machine Learning interpretável sobre as bases do Censo Escolar/INEP. Entretanto, os microdados governamentais brasileiros capturam exclusivamente indicadores acadêmicos e socioeconômicos, carecendo completamente de mensuração socioemocional ou rastreio de saúde mental. No Brasil, todo estudante cronicamente infrequente é rotulado administrativamente sob a rubrica indiferenciada de ``abandono/evasão'', tornando a recusa escolar de base emocional (EBSA) invisível aos sistemas de gestão e às políticas públicas.
+
+\section{Próximas Etapas}
+Para a operacionalização da Fase 2, desenvolveu-se uma infraestrutura sistemática de extração no repositório do projeto. Foi formalizado um formulário de coleta contendo o mapeamento PICOC, as quatro questões de pesquisa e uma matriz de avaliação de qualidade metodológica composta por cinco critérios objetivos (QA1 a QA5, graduada de 0 a 10 pontos). A partir desse modelo, foram geradas 101 fichas individuais de literatura, indexadas a um grafo de conexões conceituais que viabiliza a extração profunda e a síntese quantitativa dos dados.
+
+\section{Alinhamento para a Orientação}
+
+\textbf{Possibilidade de implementação:} Validar a proposta de estruturar um modelo conceitual híbrido que integre a predição algorítmica em larga escala (apoiada em dados administrativos escolares) a um módulo preventivo de triagem socioemocional rápida (inspirado no SCREEN/SRAS-R), oferecendo uma solução direta para mitigar a invisibilidade diagnóstica da recusa escolar no cenário educacional brasileiro.
+
+\end{document}

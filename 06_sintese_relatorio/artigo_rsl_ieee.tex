@@ -1,0 +1,317 @@
+\documentclass[journal,10pt,a4paper]{IEEEtran}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil,english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=2pt}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.8}
+\renewcommand{\dblfloatpagefraction}{0.8}
+
+\hyphenation{es-co-lar apren-di-za-do psi-co-me-tri-a absente-is-mo re-cu-sa}
+
+\begin{document}
+
+\title{Ferramentas Computacionais, Inteligência Artificial e Instrumentos Diagnósticos para Recusa Escolar e Absenteísmo Crônico na Educação Básica: Relatório Consolidado de Triagem da RSL (PRISMA 2020)}
+
+\author{Matheus~Henrique~Assunção~de~Medeiros%
+\thanks{M.~H.~A.~de~Medeiros é mestrando no Programa de Pós-Graduação em Ciência da Computação (PGCC) em Associação Ampla UERN/UFERSA.}%
+\thanks{Relatório técnico de consolidação da Fase 1 (Deduplicação e Triagem de Título/Resumo) da Revisão Sistemática da Literatura (RSL) para dissertação de mestrado. Conduzido em 04 de outubro de 2026.}
+}
+
+\markboth{Relatório Técnico de Condução de Pesquisa de Mestrado, Vol.~1, No.~2, Outubro~2026}%
+{Medeiros: RSL em Ferramentas e IA para Recusa Escolar e Absenteísmo Crônico}
+
+\maketitle
+
+\begin{abstract}
+A recusa escolar e o absenteísmo crônico configuram fenômenos biopsicossociais complexos com severas repercussões sobre o desenvolvimento cognitivo e emocional infanto-juvenil. Esta pesquisa conduz uma Revisão Sistemática da Literatura (RSL) orientada pelas diretrizes metodológicas de Kitchenham \& Charters (2007) e pelo padrão PRISMA 2020, com o propósito de mapear, caracterizar e sintetizar o estado da arte em abordagens computacionais (Inteligência Artificial, Aprendizado de Máquina e Sistemas de Alerta Precoce) e instrumentos psicométricos tradicionais de triagem para predição e diagnóstico da recusa escolar e infrequência na Educação Básica (K-12). Este relatório consolida os resultados da busca abrangente executada em seis bases de dados acadêmicas (ACM Digital Library, IEEE Xplore, ScienceDirect, Scopus, Springer Link e Web of Science Core Collection), que totalizou \textbf{1.552 registros brutos}. O processo automatizado de deduplicação identificou e removeu \textbf{81 duplicatas} inter-bases (Critério EC3), resultando em um corpus de \textbf{1.471 registros únicos}. A triagem sistemática e auditada de título e resumo (Fase 1), orientada por critérios formais de inclusão e exclusão, selecionou \textbf{101 estudos científicos} elegíveis para leitura de texto integral (Fase 2), excluindo 1.370 registros fora do escopo. Os achados preliminares revelam uma vibrante convergência entre modelos preditivos supervisionados (Random Forest, Redes Neurais e algoritmos de Ensemble) e escalas clínicas validadas (como SCARED, SRAS-R e SCREEN), sublinhando o papel determinante das variáveis de ansiedade, bullying e clima escolar no combate ao abandono discente.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Recusa Escolar, Absenteísmo Crônico, Inteligência Artificial, Aprendizado de Máquina, Sistemas de Alerta Precoce, Instrumentos Psicométricos, PRISMA 2020, Triagem Sistemática.
+\end{IEEEkeywords}
+
+\section{Introdução e Justificativa}
+\IEEEPARstart{A}{infrequência} discente continuada manifesta-se historicamente sob duas naturezas etiológicas fundamentais: a evasão de origem socioeconômica estrutural (associada à necessidade precoce de ingresso no mercado de trabalho ou carências de infraestrutura básica) e a \textit{recusa escolar} (\textit{school refusal} / \textit{school avoidance}), caracterizada por sofrimento psicológico, fobia escolar, ansiedade de separação e dificuldades de regulação socioemocional. Enquanto a evasão tradicional tem sido objeto primordial de políticas assistenciais governamentais, a recusa escolar exige detecção precoce, métodos diagnósticos e intervenções pedagógicas e psicológicas tempestivas.
+
+O crescimento da digitalização dos registros acadêmicos e a evolução das técnicas de Ciência de Dados e Inteligência Artificial (IA) impulsionaram o desenvolvimento de \textit{Early Warning Systems} (EWS) e modelos preditivos de \textit{Machine Learning} (ML) voltados à sinalização precoce do risco de desengajamento escolar. Todavia, nota-se uma nítida desconexão na literatura científica: pesquisas de computação frequentemente operam com dados administrativos agregados sem considerar construtos socioemocionais validados, ao passo que a literatura clínica da Psicologia e Psiquiatria da Infância raramente explora a escalabilidade dos algoritmos contemporâneos.
+
+O presente projeto de mestrado preenche essa lacuna através de uma Revisão Sistemática da Literatura (RSL) formal e auditável, estruturada no fluxo metodológico PRISMA 2020.
+
+\section{Protocolo Metodológico da RSL}
+
+\subsection{Estrutura do Estudo (Critério PICOC)}
+O enquadramento da investigação delineia-se estritamente conforme o critério PICOC (Tabela~\ref{tab:picoc}).
+
+\begin{table}[htbp]
+\caption{Estrutura PICOC da Revisão Sistemática}
+\label{tab:picoc}
+\centering
+\small
+\begin{tabularx}{\columnwidth}{lX}
+\toprule
+\textbf{Elemento} & \textbf{Definição Adotada no Estudo} \\
+\midrule
+\textbf{Population} & Ensino Básico \\
+\textbf{Intervention} & IA (Ferramentas de diagnóstico ou diagnóstico) \\
+\textbf{Outcomes} & Recusa escolar OR (evasão escolar AND socio-emotional factor) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Questões de Pesquisa (Research Questions)}
+A revisão busca responder a quatro Questões de Pesquisa essenciais:
+\begin{itemize}
+    \item \textbf{RQ1:} \textit{Quais são as ferramentas, escalas ou instrumentos psicométricos utilizados para diagnosticar ou rastrear a recusa escolar e o absenteísmo crônico?}
+    \item \textbf{RQ2:} \textit{De que forma técnicas de Inteligência Artificial, Machine Learning e análise de dados têm sido aplicadas na predição ou detecção precoce da recusa escolar?}
+    \item \textbf{RQ3:} \textit{Quais variáveis socioemocionais, comportamentais ou contextuais são mais frequentemente consideradas por essas ferramentas preditivas e diagnósticas?}
+    \item \textbf{RQ4:} \textit{Quais são as principais limitações, desafios metodológicos e métricas de avaliação relatados nos estudos ao implementar essas ferramentas?}
+\end{itemize}
+
+\subsection{Critérios de Elegibilidade (IC / EC)}
+Para assegurar replicabilidade, foram fixados critérios rigorosos:
+\begin{itemize}
+    \item \textbf{IC1:} Artigos de pesquisa original revisados por pares (\textit{peer-reviewed}) em periódicos ou anais de conferências.
+    \item \textbf{IC2:} Estudos que abordem o desenvolvimento, validação, aplicação empírica ou revisão de ferramentas diagnósticas, triagem ou predição para recusa escolar, absenteísmo crônico ou evasão socioemocional no K-12.
+    \item \textbf{IC3:} Idiomas inglês, português ou espanhol.
+    \item \textbf{IC4:} Publicações com validação empírica, métricas preditivas, arquiteturas de sistemas ou revisões sistemáticas.
+    \item \textbf{EC1:} Literatura cinzenta não validada, volumes completos de anais (\textit{proceedings} inteiros), livros ou resumos estendidos ($<3$ páginas) sem dados empíricos.
+    \item \textbf{EC2:} Estudos focados no Ensino Superior (graduação/universidade/MOOCs), absenteísmo laboral adulto ou evasão decorrente unicamente de causas socioeconômicas/infraestruturais externas sem componentes socioemocionais ou de IA.
+    \item \textbf{EC3:} Publicações duplicadas entre as bases de dados.
+    \item \textbf{EC4:} Textos integrais não recuperáveis institucionalmente.
+\end{itemize}
+
+\section{Estratégia e Execução das Buscas Brutas}
+
+A consulta booleana oficial combinou três eixos temáticos (\textit{Fenômeno} $\land$ \textit{Dimensão Socioemocional} $\land$ \textit{IA/Predição}) com adaptações específicas para a sintaxe de cada base de dados (Tabela~\ref{tab:buscas_executadas}).
+
+\begin{table*}[t]
+\caption{Registro das Buscas Brutas Executadas nas Seis Bases Acadêmicas Internacionais}
+\label{tab:buscas_executadas}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{cclcllX}
+\toprule
+\textbf{ID} & \textbf{Data} & \textbf{Base de Dados} & \textbf{Total} & \textbf{Formato} & \textbf{Campos da Busca} & \textbf{Filtros / Características Metodológicas} \\
+\midrule
+B01 & 24/09/2026 & ACM Digital Library & 198 & BibTeX & Title / Abstract & Consulta direta nos metadados integrados. \\
+B02 & 24/09/2026 & IEEE Xplore & 14 & BibTeX & Metadata (Title, Abs, Key) & String canônica completa tripartite via \texttt{AND}. \\
+B03 & 04/10/2026 & ScienceDirect (Elsevier) & 62 & BibTeX & Title, Abstract, Keywords & String oficial enxuta (respeitando limite estrito de 8 operadores). \\
+B04 & 04/10/2026 & Scopus (Elsevier) & 195 & BibTeX & Title, Abstract, Keywords & Execução tripartite completa via interface de busca. \\
+B05 & 04/10/2026 & Web of Science (Clarivate) & 83 & BibTeX & Topic (Title, Abs, Key) & Core Collection; Articles \& Proceeding Papers (2 lotes: 50+33). \\
+B06 & 04/10/2026 & Springer Link (Springer) & 1.000 & CSV & Todo o texto / Metadados & Filtros: Articles (921) e Conference papers (79); Open Access + Assinatura. \\
+\midrule
+\multicolumn{3}{l}{\textbf{Total Bruto Identificado}} & \textbf{1.552} & \multicolumn{3}{l}{\textbf{Universo amostral completo para deduplicação inter-bases}} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Condução da Triagem Inicial (Fase 1)}
+
+\subsection{Deduplicação Inter-bases (Critério EC3)}
+A consolidação dos 1.552 registros brutos foi executada por meio de rotinas automatizadas em Python que processaram os arquivos das seis pastas de busca bruta, realizando a normalização sistemática de identificadores digitais (DOIs) e padronização alfanumérica de títulos. 
+
+Foram identificadas e removidas \textbf{81 duplicatas inter-bases}:
+\begin{itemize}
+    \item \textbf{Web of Science:} 58 duplicatas (já catalogadas no Scopus, IEEE ou ACM).
+    \item \textbf{Springer Link:} 19 duplicatas (já indexadas no Scopus ou ScienceDirect).
+    \item \textbf{IEEE Xplore:} 3 duplicatas (presentes no Scopus).
+    \item \textbf{ACM DL:} 1 duplicata (presente no Scopus).
+\end{itemize}
+Assim, o universo para a avaliação de título e resumo resultou em \textbf{1.471 registros únicos}.
+
+\subsection{Avaliação de Título e Resumo}
+Os 1.471 estudos únicos foram avaliados individualmente segundo os critérios formais de elegibilidade. Em etapa de controle de qualidade e auditoria metodológica, foram descartados falsos positivos em que a infrequência discente atuava apenas como covariável para desfechos clínicos ou toxicológicos alheios à Educação Básica, resultando em:
+\begin{itemize}
+    \item \textbf{1.370 estudos excluídos:} 71 estudos por EC1 (volumes de anais completos, editoriais e índices) e 1.299 estudos por EC2 (foco no ensino universitário, evasão puramente macroeconômica sem suporte computacional, ou estudos biomédicos e epidemiológicos onde a infrequência era mera variável de controle).
+    \item \textbf{101 estudos incluídos para Leitura Integral (Fase 2):} Apresentam aderência direta às Questões de Pesquisa, desenvolvendo modelos preditivos de IA/ML ou investigando escalas psicométricas diagnósticas para recusa escolar e absenteísmo na Educação Básica.
+\end{itemize}
+
+A Tabela~\ref{tab:distribuicao_triagem} apresenta a distribuição auditada da triagem por base de dados de origem primária.
+
+\begin{table}[htbp]
+\caption{Resultados da Triagem de Título e Resumo por Base de Dados (Auditada)}
+\label{tab:distribuicao_triagem}
+\centering
+\small
+\begin{tabularx}{\columnwidth}{Xrrr}
+\toprule
+\textbf{Base de Dados} & \textbf{Avaliados} & \textbf{Excluídos} & \textbf{Incluídos (Fase 2)} \\
+\midrule
+Scopus & 195 & 134 & \textbf{61} (31,3\%) \\
+Springer Link & 981 & 961 & \textbf{20} (2,0\%) \\
+Web of Science & 25 & 15 & \textbf{10} (40,0\%) \\
+ACM Digital Library & 197 & 193 & \textbf{4} (2,0\%) \\
+ScienceDirect & 62 & 59 & \textbf{3} (4,8\%) \\
+IEEE Xplore & 11 & 8 & \textbf{3} (27,3\%)* \\
+\midrule
+\textbf{Total Geral} & \textbf{1.471} & \textbf{1.370} & \textbf{101} (\textbf{6,9\%}) \\
+\bottomrule
+\multicolumn{4}{@{}p{\columnwidth}@{}}{\scriptsize *Outros estudos da IEEE indexados simultaneamente no Scopus foram catalogados sob a base primária Scopus.}
+\end{tabularx}
+\end{table}
+
+\subsection{Diagrama de Fluxo PRISMA 2020}
+A Figura~\ref{fig:prisma_flowchart} documenta o fluxo PRISMA 2020 consolidado com os dados reais auditados da condução.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=0.55cm and 0.4cm,
+    every node/.style={font=\scriptsize, align=center},
+    block/.style={rectangle, draw=black!80, fill=blue!5, rounded corners=2pt, text width=4.3cm, minimum height=0.6cm},
+    action/.style={rectangle, draw=black!70, fill=gray!15, rounded corners=2pt, text width=4.3cm, minimum height=0.6cm},
+    excluded/.style={rectangle, draw=black!80, fill=red!10, rounded corners=2pt, text width=2.2cm, minimum height=0.6cm},
+    arrow/.style={-latex, thick, draw=black!80}
+]
+
+% Nodes
+\node (banco) [block] {\textbf{1. Identificação nas Bases}\\Total Bruto: \textbf{1.552 registros}\\(Springer: 1.000; ACM: 198; Scopus: 195;\\WoS: 83; ScienceDirect: 62; IEEE: 14)};
+
+\node (dedup) [action, below=of banco] {\textbf{2. Remoção de Duplicatas (EC3)}\\\textbf{81 duplicatas removidas}\\(WoS: 58; Springer: 19; IEEE: 3; ACM: 1)};
+
+\node (triagem) [block, below=of dedup] {\textbf{3. Triagem por Título/Resumo}\\\textbf{1.471 registros únicos avaliados}};
+
+\node (excl_triagem) [excluded, right=0.6cm of triagem] {\textbf{Excluídos (Fase 1)}\\\textbf{1.370 estudos}\\(71 por EC1;\\1.299 por EC2)};
+
+\node (elegibilidade) [block, fill=green!10, below=of triagem] {\textbf{4. Artigos Elegíveis (Fase 2)}\\\textbf{101 estudos selecionados}\\(Scopus: 61; Springer: 20; WoS: 10;\\ACM: 4; ScienceDirect: 3; IEEE: 3)};
+
+\node (inclusao) [action, below=of elegibilidade] {\textbf{5. Próxima Etapa: Leitura Completa}\\Obtenção de Textos Integrais (CAPES),\\Extração de Dados e Avaliação de Qualidade};
+
+% Arrows
+\draw [arrow] (banco) -- (dedup);
+\draw [arrow] (dedup) -- (triagem);
+\draw [arrow] (triagem) -- (elegibilidade);
+\draw [arrow] (triagem) -- (excl_triagem);
+\draw [arrow] (elegibilidade) -- (inclusao);
+
+\end{tikzpicture}
+\caption{Diagrama de Fluxo PRISMA 2020 atualizado com os quantitativos reais da etapa de Identificação e Triagem Inicial da RSL.}
+\label{fig:prisma_flowchart}
+\end{figure}
+
+\begin{table*}[!t]
+\caption{Síntese de Estudos Representativos Selecionados na Triagem Inicial por Base Acadêmica (Fase 1)}
+\label{tab:amostra_selecionados}
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.88}
+\begin{tabularx}{\textwidth}{cc>{\RaggedRight\arraybackslash\hsize=1.35\hsize}Xll>{\RaggedRight\arraybackslash\hsize=0.65\hsize}Xc}
+\toprule
+\textbf{ID} & \textbf{Ano} & \textbf{Título do Estudo} & \textbf{Base} & \textbf{Veículo} & \textbf{Abordagem Metodológica / Instrumento} & \textbf{RQs} \\
+\midrule
+S0008 & 2026 & Investigating School Refusal in Italy: SCREEN & Scopus & Children & Escala SCREEN para Recusa Escolar (CFA/SEM) & RQ1, RQ3 \\
+S0013 & 2019 & Emerging School Refusal: A School-Based Framework & Scopus & J. School Psychol. & Framework Multinível e Triagem Precoce & RQ1, RQ2 \\
+S0197 & 2022 & Revealing Underlying Factors of Absenteeism & WoS & Comput. \& Educ. & Machine Learning (Random Forest / XGBoost) & RQ2, RQ3, RQ4 \\
+S0198 & 2026 & ML Approach to Classify Absenteeism with ADHD & WoS & School Ment. Health & Algoritmos de ML e Perfis de Infrequência & RQ2, RQ3 \\
+S0224 & 2019 & Online Early Detection System for Attendance Problems & ScienceDirect & Cognit. Behav. Pract. & EWS Baseado em Web e Métricas Comportamentais & RQ2, RQ3, RQ4 \\
+S0265 & 2026 & Interpretable ML Framework for Psychological Risk & ScienceDirect & Comput. Biol. Med. & Machine Learning Interpretável (XAI) no K-12 & RQ2, RQ4 \\
+S0315 & 2025 & Difficult Lessons on Social Prediction from Wisconsin & ACM DL & FAccT & Avaliação Crítica de EWS em Escolas Públicas & RQ2, RQ4 \\
+S0334 & 2022 & Re-envisioning K-12 Early Warning System with Climate & ACM DL & L@S & EWS + Clima Escolar e Aprendizagem Socioemocional & RQ2, RQ3 \\
+S0501 & 2026 & Interpretable ML for Predicting Absenteeism in Brazil & Springer Link & Scientific Reports & ML em Larga Escala (22.000 escolas públicas) & RQ2, RQ3, RQ4 \\
+S0001 & 2025 & Predicting School Dropout and Simulating Interventions & IEEE Xplore & AmITIC & Redes Neurais e SVM (>85\% acurácia) & RQ2, RQ4 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Discussão dos Resultados da Triagem Inicial}
+
+A triagem auditada dos 101 estudos fornece um panorama empírico consistente para responder às quatro Questões de Pesquisa:
+
+\subsection{Instrumentos Diagnósticos e Psicométricos (RQ1)}
+A literatura internacional revela a consolidação de instrumentos especializados para avaliação de recusa escolar e ansiedade, destacando-se:
+\begin{enumerate}
+    \item \textbf{Escalas Funcionais de Recusa Escolar:} A \textit{School Refusal Assessment Scale-Revised} (SRAS-R) e o recente instrumento \textit{SCREEN} (validado em 2026) despontam como ferramentas centrais para diferenciar as quatro funções da recusa escolar (evitação de estímulos aversivos, fuga de avaliação social, busca de atenção parental e reforço positivo tangível fora da escola).
+    \item \textbf{Escalas de Ansiedade e Sofrimento Psicológico:} A escala \textit{SCARED} (\textit{Screen for Child Anxiety Related Disorders}) e instrumentos baseados no \textit{CBCL} e \textit{DASS} são frequentemente utilizados em triagens clínicas aplicadas ao ambiente escolar para identificar comorbidades internalizantes precoces.
+\end{enumerate}
+
+\subsection{Modelos de Inteligência Artificial e Aprendizado de Máquina (RQ2)}
+Os estudos selecionados evidenciam uma evolução arquitetural notável:
+\begin{itemize}
+    \item \textbf{Modelos Tradicionais versus Ensembles:} Modelos baseados em \textit{Random Forest}, \textit{Gradient Boosting} (XGBoost, LightGBM) e \textit{Support Vector Machines} (SVM) constituem o núcleo dos sistemas de predição de absenteísmo, superando regressões logísticas tradicionais e alcançando acurácias superiores a 85--90\%.
+    \item \textbf{Redes Neurais e Deep Learning:} Aplicações recentes (2024--2026) utilizam Redes Neurais Convolucionais (CNNs) para rastreio de microcomportamentos e redes recorrentes (LSTM) para modelar trajetórias temporais de frequência discente.
+    \item \textbf{Sistemas de Alerta Precoce (EWS) em Grande Escala:} Destaca-se o estudo de Barros et al. (2026), que aplicou modelos interpretáveis em escala massiva abrangendo mais de 22.000 escolas públicas brasileiras, comprovando a viabilidade de implantação de EWS na rede básica pública.
+\end{itemize}
+
+\subsection{Variáveis Socioemocionais e Contextuais (RQ3)}
+Diferente dos sistemas escolares arcaicos que monitoravam apenas notas e faltas acumuladas, os modelos modernos incorporam preditores multifatoriais:
+\begin{itemize}
+    \item \textbf{Saúde Mental e Clima Escolar:} Indicadores de vitimização por bullying, sensação de pertencimento escolar (\textit{school connectedness}), sintomas de ansiedade e suporte parental demonstram maior poder preditivo na infrequência inicial do que dados estritamente demográficos.
+    \item \textbf{Interações Neurodesenvolvimentais:} Pesquisas em periódicos como \textit{School Mental Health} (2025/2026) investigam padrões específicos de absenteísmo em alunos com Transtorno do Espectro Autista (TEA) e TDAH.
+\end{itemize}
+
+\subsection{Desafios Metodológicos e Limitações (RQ4)}
+Quatro barreiras metodológicas críticas emergem na literatura:
+\begin{itemize}
+    \item \textbf{Desbalanceamento Severo de Classes:} Como a recusa escolar severa representa uma minoria na população discente geral, técnicas de aprendizado desbalanceado (SMOTE, reponderação de custo e penalização de falsos negativos) são indispensáveis para evitar modelos triviais de alta acurácia cega.
+    \item \textbf{Explicabilidade (XAI):} A literatura de 2025/2026 estabelece como requisito ético o uso de técnicas como SHAP e LIME, permitindo que professores e psicólogos escolares compreendam os fatores de risco determinantes para cada aluno individual.
+    \item \textbf{Vieses Algorítmicos e Ética:} Estudos recentes na conferência ACM FAccT (2025) alertam para o risco de rotulação estigmatizante de alunos vulneráveis por modelos preditivos automatizados.
+\end{itemize}
+
+\section{Cronograma e Próximos Passos (Fase 2)}
+Com a conclusão da triagem de título e resumo, o fluxo metodológico avança para:
+\begin{enumerate}
+    \item \textbf{Recuperação de Textos Completos:} Obtenção dos 101 artigos científicos através do convênio CAPES/CAFe e repositórios institucionais.
+    \item \textbf{Avaliação de Elegibilidade em Texto Integral:} Confirmação dos critérios IC/EC e registro de exclusões pós-leitura integral.
+    \item \textbf{Extração de Dados Estruturada:} Aplicação do formulário cobrindo algoritmos, hiperparâmetros, métricas (F1-score, AUC-ROC), escalas psicométricas e características da amostra escolar.
+    \item \textbf{Avaliação de Qualidade Metodológica:} Aplicação do checklist QA1 a QA5.
+    \item \textbf{Síntese e Redação da Dissertação:} Consolidação das respostas detalhadas às Questões de Pesquisa no texto da dissertação de mestrado.
+\end{enumerate}
+
+\section{Conclusão}
+Este relatório técnico consolida formalmente o encerramento da Fase 1 da Revisão Sistemática da Literatura. O mapeamento exaustivo em seis bases internacionais (1.552 registros brutos), a posterior deduplicação (1.471 registros únicos) e a auditoria metodológica de elegibilidade resultaram na seleção criteriosa de 101 estudos científicos de alta aderência temática. Os dados empíricos obtidos confirmam a maturidade e a relevância de investigar ferramentas computacionais e inteligência artificial associadas a construtos socioemocionais para a predição da recusa escolar e do absenteísmo crônico na Educação Básica.
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{10}\footnotesize
+\setlength{\itemsep}{0pt plus 0.2ex}
+
+\bibitem{kitchenham2007}
+B.~Kitchenham and S.~Charters, ``Guidelines for performing Systematic Literature Reviews in Software Engineering,'' Keele University and Durham University Joint Report, Tech. Rep. EBSE-2007-01, 2007.
+
+\bibitem{prisma2020}
+M.~J.~Page \textit{et al.}, ``The PRISMA 2020 statement: an updated guideline for reporting systematic reviews,'' \textit{BMJ}, vol.~372, p.~n71, 2021.
+
+\bibitem{kearney2019}
+C.~A.~Kearney and P.~Graczyk, ``A Response to Intervention Model to Promote School Attendance and Decrease School Absenteeism,'' \textit{Child \& Youth Care Forum}, vol.~49, no.~1, pp.~1--25, 2020.
+
+\bibitem{chu2019}
+B.~C.~Chu \textit{et al.}, ``Developing an Online Early Detection System for School Attendance Problems: Results From a Research-Community Partnership,'' \textit{Cognitive and Behavioral Practice}, vol.~26, no.~1, pp.~35--45, 2019.
+
+\bibitem{cimen2025}
+F.~{\c{C}}imen, {\.I}.~Se{\c{c}}er, and E.~Ay, ``Latent Profile and Network Analysis of School Attendance Problems in Adolescents: An Evaluation in Terms of Mental Health Issues, Academic Achievement, and School Dropout,'' \textit{School Mental Health}, vol.~17, no.~2, pp.~1--16, 2025.
+
+\bibitem{barros2026}
+A.~N.~Barros \textit{et al.}, ``Interpretable machine learning for predicting school absenteeism at-scale in Brazil: evidence from 22,000 schools,'' \textit{Scientific Reports}, vol.~16, no.~1, pp.~48729, 2026.
+
+\bibitem{meduri2026}
+C.~F.~Meduri \textit{et al.}, ``Investigating School Refusal in the Italian Context: SCREEN Validation,'' \textit{Children}, vol.~13, no.~3, pp.~1--15, 2026.
+
+\bibitem{umayangana2026}
+I.~G.~G.~Umayangana and R.~A.~B.~Abeygunawardana, ``A Machine Learning Approach for Predicting the Anxiety Status Among O/L Students: A Case Study from Elpitiya Educational Zone,'' in \textit{Proc. 2026 6th Int. Conf. on Advanced Research in Computing (ICARC)}, 2026.
+
+\bibitem{zuleta2026}
+R.~Y.~Zuleta~Torres \textit{et al.}, ``AI-Driven Psychoeducational Analytics for Early Detection of Academic Risk in Colombian Schools,'' in \textit{Proc. 2026 IEEE Engineering Education World Conf. (EDUNINE)}, 2026.
+
+\bibitem{perdomo2025}
+J.~C.~Perdomo \textit{et al.}, ``Difficult Lessons on Social Prediction from Wisconsin Public Schools,'' in \textit{Proc. 2025 ACM Conf. on Fairness, Accountability, and Transparency (FAccT)}, 2025, pp.~2682--2704.
+
+\end{thebibliography}
+
+\end{document}
