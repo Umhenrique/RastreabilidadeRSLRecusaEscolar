@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Jornal de pediatria"
 doi: "10.2223/1166"
 url: "https://www.scopus.com/pages/publications/7444226805?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -37,7 +37,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.2223/1166](https://doi.org/10.2223/1166)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/7444226805?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "JNP- THE JOURNAL FOR NURSE PRACTITIONERS"
 doi: "10.1016/j.nurpra.2026.105950"
 url: ""
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Relato de Caso)]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science']`)
 > - **DOI:** [10.1016/j.nurpra.2026.105950](https://doi.org/10.1016/j.nurpra.2026.105950)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Relato de Caso)]`
 
 ---
 

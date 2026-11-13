@@ -4,8 +4,8 @@
 **Pesquisador:** Matheus Henrique Assuncao de Medeiros  
 **Programa:** PGCC UERN / UFERSA  
 **Responsavel:** Especialista 4 (Gestao de Memoria)  
-**Data da Ultima Atualizacao:** 30 de Outubro de 2026  
-**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada) | `[Em Andamento]` Fase 2 (Extracao de 101 Estudos)  
+**Data da Ultima Atualizacao:** 13 de Novembro de 2026  
+**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada: 101 Elegiveis) | `[Em Andamento]` Fase 2 (85 Estudos Ativos: 2 Extraidos, 83 Pendentes; 16 Excluidos na Auditoria de Fase 2)  
 
 ---
 
@@ -34,13 +34,18 @@
         │
         ▼
 [Fase 2: Elegiveis para Leitura de Texto Completo e Extracao]
-   Corpus oficial aprovado: N = 101 artigos cientificos (Taxa de selecao: 6,9%)
+   Corpus elegivel inicial: N = 101 artigos cientificos (Taxa de selecao Fase 1: 6,9%)
    ├── Scopus: 61
    ├── Springer Link: 20
    ├── Web of Science: 10
    ├── ACM Digital Library: 4
    ├── ScienceDirect: 3
    └── IEEE Xplore: 3
+        │
+        ▼
+[Auditoria Inicial da Fase 2 (DEC-007)]
+   Excluidos na auditoria pre-extracao: N = 16 (1 duplicata EC3 [S0199]; 15 fora de escopo EC2)
+   Corpus ativo em leitura completa: N = 85 estudos (2 concluidos [S0012, S0104]; 83 pendentes)
 ```
 
 ---

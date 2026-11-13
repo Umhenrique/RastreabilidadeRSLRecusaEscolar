@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "BMC PUBLIC HEALTH"
 doi: "10.1186/s12889-020-09809-9"
 url: ""
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -46,7 +46,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science', 'Springer Link']`)
 > - **DOI:** [10.1186/s12889-020-09809-9](https://doi.org/10.1186/s12889-020-09809-9)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

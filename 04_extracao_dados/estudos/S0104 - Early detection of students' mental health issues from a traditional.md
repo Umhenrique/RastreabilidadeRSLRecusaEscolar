@@ -7,8 +7,8 @@ database: "Scopus"
 venue: "Frontiers in Public Health"
 doi: "10.3389/fpubh.2024.1430011"
 url: "https://www.scopus.com/pages/publications/85204796852?origin=resultslist"
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 9
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
 outcome_scope: "Predição de Absenteísmo Crônico Escolar"
@@ -49,7 +49,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3389/fpubh.2024.1430011](https://doi.org/10.3389/fpubh.2024.1430011)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85204796852?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -74,51 +74,51 @@ tags:
 - **Titulo Completo:** Early detection of students’ mental health issues from a traditional daily health observation scheme in Japanese schools and its digitalization
 - **Autores:** Tomoko Nishimura, Manabu Wakuta, Yuko Osuka, Nobuaki Tsukui, Ikue Hirata, Michio Takahashi, Masaki Adachi, Taiichi Katayama, Kyoko Aizaki, Motofumi Sumiya, Sayaka Kawakami, Toshiki Iwabuchi, Atsushi Senju
 - **Ano de Publicacao:** 2024
-- **Tipo de Publicacao:** Periodico / Conferencia
+- **Tipo de Publicacao:** Periodico (Original Research)
 - **Nome do Veiculo:** Frontiers in Public Health
 - **DOI:** [10.3389/fpubh.2024.1430011](https://doi.org/10.3389/fpubh.2024.1430011)
 - **Base de Dados:** Scopus
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Japao (cidade de porte medio no oeste do Japao; 5 escolas publicas)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Adolescentes)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Predição de Absenteísmo Crônico Escolar
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Ensino Fundamental I, II e Junior High (1o ao 9o ano japones: 3 escolas primarias e 2 escolas secundarias)
+- **Faixa Etaria / Amostra ($N$):** $N = 2.433$ alunos iniciais; $N = 2.143$ analisados apos exclusao de baixa taxa de resposta (1.241 do fundamental e 902 do junior high; 49,4% sexo feminino)
+- **Publico-alvo Avaliado:** Estudantes da educacao basica publica monitorados ao longo de 76 dias letivos (setembro a dezembro de 2022) para predicao de sintomas depressivos/ansiosos e absenteismo escolar (*Futoukou*)
+- **Fonte dos Dados / Dataset:** Aplicativo digital de observacao diaria de saude (*daily health observation*) via tablets do programa GIGA School, registros diarios de presenca pelos professores e questionarios psicometricos (PHQ-4 e JaSC)
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** *Daily Health Observation* digitalizado (8 itens fisicos/ritmo de vida + item emocional baseado em *Zones of Regulation*), *Patient Health Questionnaire-4* (PHQ-4: 2 itens PHQ-9 + 2 itens GAD-7) e *Japan School Climate Scale* (JaSC, 32 itens)
+- **Natureza da Ferramenta:** Ferramenta digitalizada de triagem diaria longitudinal combinada com escalas psicometricas padronizadas
+- **Forma de Aplicacao:** Autorrelato diario do aluno em tablet escolar e registro diario de faltas pelo professor regente
+- **Finalidade:** Triagem inicial continua, deteccao precoce de sofrimento mental e monitoramento de risco de absenteismo/recusa escolar (*Futoukou*)
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** *(Identificar na leitura ou N/A)*
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Analise Estatistica Avancada Longitudinal, Modelagem de Trajetorias Baseada em Grupos (*Group-Based Trajectory Modeling* - GBTM com modelo *zero-inflated Poisson*) e Deteccao de Anomalias via *Rolling Z-Score* (janela movel de 7 dias) + Regressao Binomial Negativa Multinivel
+- **Algoritmos Empregados:** Group-Based Trajectory Modeling (Stata `traj`, ZIP), Rolling Z-Score (limiar $z > +1$ para respostas incomuns), Regressao Binomial Negativa Multinivel
+- **Tarefa do Modelo:** Clustering longitudinal de trajetoria (5 perfis de risco) + deteccao de anomalias diarias + predicao prospectiva de sintomas (PHQ-4) e dias de falta
+- **Estagio de Deteccao:** Alerta precoce / monitoramento preventivo diario em ambiente escolar
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Sintomas somaticos (dor de estomago, dor de cabeca, nausea), fadiga, estados emocionais das 4 zonas (*Zones of Regulation*: feliz/calmo, cansado/ansioso/triste, irritado/tenso, frustrado/raiva/panico), sintomas depressivos e ansiosos (PHQ-4)
+- **Variaveis Comportamentais / Historico:** Ritmo de vida/sono (dormir tarde, dificuldade de acordar, pular cafe da manha), numero total de dias de falta no periodo de 4 meses
+- **Variaveis Familiares / Sociodemograficas:** Serie escolar (*grade*), genero e idioma principal falado (japones vs. nao-japones)
+- **Variaveis Institucionais / Contextuais:** Clima escolar percebido em nivel individual e media da turma (seguranca, aprendizagem e relacoes interpessoais via JaSC)
+- **Features Mais Relevantes Identificadas:** Pertencimento ao Grupo 5 de trajetoria cronica (5,4% dos alunos, 3-4 queixas diarias crescentes), media do escore diario de saude e contagem de respostas anomalas (*rolling z-score* $> +1$)
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** Alfa de Cronbach = 0,71 para a estrutura unifatorial de 8 itens do *daily health issue*; analise fatorial exploratoria e confirmatoria (PHQ-4 tratado como 1 fator)
+- **Metricas Computacionais (ML):** BIC = -95.746,63, SA-BIC = -95.713,37, Entropia = 0,900 (solucao otima de 5 grupos); *Incident Rate Ratio* (IRR): Grupo 5 apresentou IRR = 5,17 (IC 95%: 3,82-6,99) para depressao/ansiedade e IRR = 2,14 (IC 95%: 1,19-3,85) para dias de falta em relacao ao Grupo 1; Clima escolar (IRR = 0,58 para sintomas)
+- **Estrategia de Validacao:** Ajuste longitudinal por BIC/SA-BIC, probabilidade posterior > 0,7, entropia e regressao multinivel ajustada por aluno e sala de aula (sem split treino/teste de ML classico)
+- **Desafios Metodologicos Relatados:** Exclusao de 290 alunos (11,9%) com baixa taxa de resposta (<50% dos dias); maioria dos alunos com zero faltas (distribuicao altamente inflacionada de zeros)
+- **Aspectos Eticos e Transparencia (XAI):** Aprovacao em comite de etica, consentimento parental opt-out; os autores destacam que o *rolling z-score* e um algoritmo simples e transparente que permite aos professores explicar facilmente por que um alerta foi gerado, evitando dependencia cega de algoritmos
+- **Limitacoes Declaradas:** Nao registrou os motivos especificos das faltas (doenca fisica vs. recusa escolar); amostra restrita a uma cidade japonesa; nao analisou separadamente fundamental vs. junior high nos modelos principais
+- **Direcoes Futuras:** Integrar explicabilidade para professores, expandir validacao por faixa etaria/regiao e usar dados diarios para fortalecer alfabetizacao em saude mental dos estudantes
 
 ---
 
@@ -127,12 +127,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Objetivo explicito de avaliar o valor preditivo da observacao diaria digitalizada para detectar depressao, ansiedade e absenteismo escolar. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Descreve amostra ($N=2.433$ / $2.143$), 76 dias letivos, itens, formulas (GBTM ZIP, *rolling z-score*) e covariaveis multinivel em Stata 17.0. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 2 | Reporta Alfa de Cronbach (0,71), BIC/SA-BIC, Entropia (0,900) e IRRs com IC 95% e p-valores. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Integra sintomas somaticos, emocoes (*Zones of Regulation*), sono, clima escolar (JaSC), PHQ-4 e dias de ausencia escolar. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 1 | Discute perda amostral (11,9%), ausencia do motivo das faltas e diferencas entre niveis escolares, embora sem validacao externa em outras regioes. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **9 / 10** | Estudo empirico robusto e diretamente aplicavel a sistemas escolares de triagem diaria digital. |
 
 ---
 

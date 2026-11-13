@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Journal of Education for Students Placed at Risk"
 doi: "10.1080/10824669.2026.2666173"
 url: "https://www.scopus.com/pages/publications/105038092080?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Sistemas de Alerta Precoce (EWS) baseados em IA"
@@ -37,7 +37,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1080/10824669.2026.2666173](https://doi.org/10.1080/10824669.2026.2666173)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105038092080?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "BMC Psychiatry"
 doi: "10.1186/s12888-022-03861-y"
 url: "https://www.scopus.com/pages/publications/85127290244?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science', 'Springer Link']`)
 > - **DOI:** [10.1186/s12888-022-03861-y](https://doi.org/10.1186/s12888-022-03861-y)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85127290244?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

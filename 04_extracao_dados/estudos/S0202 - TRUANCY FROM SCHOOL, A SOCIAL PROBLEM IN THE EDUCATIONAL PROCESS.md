@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "REVISTA ON LINE DE POLITICA E GESTAO EDUCACIONAL"
 doi: "10.22633/rpge.v29iesp3.20701"
 url: ""
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Médio)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science']`)
 > - **DOI:** [10.22633/rpge.v29iesp3.20701](https://doi.org/10.22633/rpge.v29iesp3.20701)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

@@ -7,8 +7,8 @@ database: "Scopus"
 venue: "Frontiers in Psychiatry"
 doi: "10.3389/fpsyt.2026.1910713"
 url: "https://www.scopus.com/pages/publications/105048745161?origin=resultslist"
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 6
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
 outcome_scope: "Rastreio e Diagnóstico de Recusa Escolar / EBSA"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3389/fpsyt.2026.1910713](https://doi.org/10.3389/fpsyt.2026.1910713)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105048745161?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -63,51 +63,51 @@ tags:
 - **Titulo Completo:** Artificial intelligence as decision support for adolescent depression and anxiety: a mini review of clinical utility, safety, and implementation
 - **Autores:** Xinyue Zhou, Lei Geng
 - **Ano de Publicacao:** 2026
-- **Tipo de Publicacao:** Periodico / Conferencia
+- **Tipo de Publicacao:** Periodico (Mini Review)
 - **Nome do Veiculo:** Frontiers in Psychiatry
 - **DOI:** [10.3389/fpsyt.2026.1910713](https://doi.org/10.3389/fpsyt.2026.1910713)
 - **Base de Dados:** Scopus
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Dinamarca e China (autores da Copenhagen Business School e Wuhan Mental Health Center; revisao narrativa internacional)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Adolescentes)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Rastreio e Diagnóstico de Recusa Escolar / EBSA
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Basica / Adolescencia (faixa de risco ate 18 anos; destaque para pico de DALYs entre 15-19 anos)
+- **Faixa Etaria / Amostra ($N$):** N/A (Mini Review narrativa sobre adolescentes com depressao e ansiedade; discute coortes como ABCD Study e amostras escolares/clinicas)
+- **Publico-alvo Avaliado:** Adolescentes em risco ou em acompanhamento para depressao, ansiedade e problemas internalizantes (incluindo manifestacoes indiretas como recusa escolar / *school refusal*)
+- **Fonte dos Dados / Dataset:** Revisao narrativa de literatura clinica, prontuarios eletronicos (EHR), fenotipagem digital (smartphones/wearables), coortes longitudinais (ex.: ABCD Study) e interfaces conversacionais (LLMs)
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** Menciona PHQ-9, GAD-7 e cuidado baseado em medicoes (*Measurement-Based Care* - MBC) com escalas padronizadas repetidas; nao aplica escala especifica de recusa escolar (como SRAS-R)
+- **Natureza da Ferramenta:** Escalas clinicas padronizadas e questionarios digitais integrados a monitoramento continuo
+- **Forma de Aplicacao:** Autorrelato do adolescente, relato dos pais e avaliacao clinica estruturada
+- **Finalidade:** Triagem, monitoramento entre consultas, avaliacao de gravidade (PHQ-9/GAD-7) e suporte a decisao clinica
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** *(Identificar na leitura ou N/A)*
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Analise conceitual e revisao de modelos de Machine Learning preditivo prospectivo, Deep Learning multitarefa (NLP), Fenotipagem Digital (*digital phenotyping*) e Grandes Modelos de Linguagem (LLMs / agentes conversacionais)
+- **Algoritmos Empregados:** N/A (estudo de revisao; discute modelos de predicao longitudinal, deep learning textual para PHQ-9/GAD-7, sensores moveis e chatbots baseados em LLMs)
+- **Tarefa do Modelo:** Suporte a decisao clinica (*decision-first*): predicao prospectiva de risco/inicio, triagem, deteccao precoce de nao-resposta ao tratamento e escalonamento de seguranca
+- **Estagio de Deteccao:** Alerta precoce / identificacao prospectiva e monitoramento continuo entre consultas (rejeita diagnostico autonomo)
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Afeto negativo, sensibilidade a ameaca, desregulacao emocional, sintomas somaticos, disturbios do sono, irritabilidade, ideacao suicida/autolesao
+- **Variaveis Comportamentais / Historico:** Recusa escolar (*school refusal*), queda de frequencia e rendimento academico, isolamento social, uso de chatbots de IA, padroes de atividade/sono via smartphone
+- **Variaveis Familiares / Sociodemograficas:** Conflito familiar, acesso a cuidados de saude, idioma minoritario, alfabetizacao digital, posse de dispositivos e nivel socioeconomico
+- **Variaveis Institucionais / Contextuais:** Contexto escolar, fluxos de encaminhamento escolar, capacidade de atendimento dos servicos clinicos e barreiras culturais
+- **Features Mais Relevantes Identificadas:** Piora do sono, nao-frequencia escolar (*school non-attendance*), historico previo de ansiedade, estresse familiar e escalada recente de sintomas
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** N/A (nao reporta experimentos proprios; discute precisao de medicao e concordancia entre relato de pais e adolescentes)
+- **Metricas Computacionais (ML):** Discute insuficiencia de AUC isolada; enfatiza calibracao (curva/inclinacao de calibracao), beneficio liquido (*net benefit* / *decision-curve analysis*) e taxas de falsos positivos/negativos em eventos de baixa prevalencia
+- **Estrategia de Validacao:** Recomenda validacao externa prospectiva, avaliacao por subgrupos, comparadores realistas e diretrizes TRIPOD+AI, PROBAST+AI, CONSORT-AI, DECIDE-AI e CHART
+- **Desafios Metodologicos Relatados:** Desenhos retrospectivos, amostras selecionadas, *outcome leakage* (modelos que preveem documentacao/encaminhamento em vez de adoecimento), baixa prevalencia base, falta de calibracao e fadiga de alertas
+- **Aspectos Eticos e Transparencia (XAI):** Privacidade e consentimento/assentimento em adolescentes, risco de vigilancia intrusiva por sensores passivos, vies racial/socioeconomico de acesso, interpretabilidade acionavel para clinicos e proibicao de diagnostico/crise autonomos por LLMs
+- **Limitacoes Declaradas:** Revisao narrativa (nao sistematica), focada em utilidade clinica, limites de seguranca e implementacao, sem sintese quantitativa exaustiva de algoritmos
+- **Direcoes Futuras:** Desenvolver IA orientada a decisoes concretas (*decision-first*), testar prospectivamente em fluxos reais de cuidado, priorizar transportabilidade cultural e comprovar melhoria de desfechos clinicos
 
 ---
 
@@ -116,12 +116,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Define claramente o foco em utilidade clinica, seguranca e implementacao de IA como suporte a decisao em depressao e ansiedade na adolescencia. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 1 | Trata-se de uma Mini Review narrativa ("Literature was selected narratively"), sem protocolo sistematico replicavel ou experimento proprio. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | Nao apresenta experimentos ou metricas empiricas proprias de validacao (apenas framework conceitual na Tabela 1). |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 1 | Cita recusa escolar e queda de frequencia como sinais precoces/features relevantes, mas o foco central e depressao e ansiedade clinicas. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Analise extensa e rigorosa sobre *outcome leakage*, calibracao, vies de acesso, privacidade em adolescentes, riscos de LLMs e transportabilidade. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **6 / 10** | Artigo conceitual/revisao forte para fundamentar XAI, etica e arquitetura *decision-first* na RSL. |
 
 ---
 

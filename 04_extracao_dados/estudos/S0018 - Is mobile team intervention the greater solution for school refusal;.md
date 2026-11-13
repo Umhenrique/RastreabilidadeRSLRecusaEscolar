@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Journal de Therapie Comportementale et Cognitive"
 doi: "10.1016/j.jtcc.2018.06.008"
 url: "https://www.scopus.com/pages/publications/85051257082?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -39,7 +39,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1016/j.jtcc.2018.06.008](https://doi.org/10.1016/j.jtcc.2018.06.008)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85051257082?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

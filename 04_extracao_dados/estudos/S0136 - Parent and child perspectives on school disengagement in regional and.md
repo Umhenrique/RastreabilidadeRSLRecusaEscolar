@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "International Journal of Adolescence and Youth"
 doi: "10.1080/02673843.2026.2731698"
 url: "https://www.scopus.com/pages/publications/105050491361?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1080/02673843.2026.2731698](https://doi.org/10.1080/02673843.2026.2731698)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105050491361?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 

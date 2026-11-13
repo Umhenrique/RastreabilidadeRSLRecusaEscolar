@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "ANADOLU PSIKIYATRI DERGISI-ANATOLIAN JOURNAL OF PSYCHIATRY"
 doi: ""
 url: ""
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC3 (Duplicata de S0183)]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -39,7 +39,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science']`)
 > - **DOI:** Não informado
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC3 (Duplicata de S0183)]`
 
 ---
 

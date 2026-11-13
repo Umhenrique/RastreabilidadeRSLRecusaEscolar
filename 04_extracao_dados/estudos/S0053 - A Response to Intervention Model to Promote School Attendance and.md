@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Child and Youth Care Forum"
 doi: "10.1007/s10566-013-9222-1"
 url: "https://www.scopus.com/pages/publications/84895058732?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1007/s10566-013-9222-1](https://doi.org/10.1007/s10566-013-9222-1)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/84895058732?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo / Sem IA ou Escala)]`
 
 ---
 
