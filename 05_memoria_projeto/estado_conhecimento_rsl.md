@@ -5,7 +5,7 @@
 **Programa:** PGCC UERN / UFERSA  
 **Responsavel:** Especialista 4 (Gestao de Memoria)  
 **Data da Ultima Atualizacao:** 13 de Novembro de 2026  
-**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada: 101 Elegiveis) | `[Em Andamento]` Fase 2 (85 Estudos Ativos: 2 Extraidos, 83 Pendentes; 16 Excluidos na Auditoria de Fase 2)  
+**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada: 101 Elegiveis) | `[Em Andamento]` Fase 2 (24 Extraidos, 59 Pendentes, 18 Excluidos na Fase 2)  
 
 ---
 
@@ -43,9 +43,11 @@
    └── IEEE Xplore: 3
         │
         ▼
-[Auditoria Inicial da Fase 2 (DEC-007)]
-   Excluidos na auditoria pre-extracao: N = 16 (1 duplicata EC3 [S0199]; 15 fora de escopo EC2)
-   Corpus ativo em leitura completa: N = 85 estudos (2 concluidos [S0012, S0104]; 83 pendentes)
+[Auditoria e Leitura Completa da Fase 2]
+   Excluidos na auditoria pre-extracao (DEC-007): N = 16 (1 duplicata EC3 [S0199]; 15 fora de escopo EC2)
+   Excluidos apos leitura integral do PDF: N = 2 (S0133 [Ensino Superior UCI]; S0153 [sem desfecho de absenteismo/recusa])
+   Estudos extraidos integralmente com sucesso: N = 24
+   Estudos pendentes de leitura completa: N = 59
 ```
 
 ---

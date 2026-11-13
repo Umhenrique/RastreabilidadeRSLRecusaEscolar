@@ -7,8 +7,8 @@ database: "Web of Science"
 venue: "SCHOOL MENTAL HEALTH"
 doi: "10.1007/s12310-026-09893-z"
 url: ""
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 10
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Random Forest / Ensemble Learning"
 outcome_scope: "Predição de Absenteísmo Crônico Escolar"
@@ -45,7 +45,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science', 'Springer Link']`)
 > - **DOI:** [10.1007/s12310-026-09893-z](https://doi.org/10.1007/s12310-026-09893-z)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -74,47 +74,47 @@ tags:
 - **Nome do Veiculo:** SCHOOL MENTAL HEALTH
 - **DOI:** [10.1007/s12310-026-09893-z](https://doi.org/10.1007/s12310-026-09893-z)
 - **Base de Dados:** Web of Science
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Canada
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Crianças)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Predição de Absenteísmo Crônico Escolar
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Basica (Criancas e Adolescentes, 4-17 anos)
+- **Faixa Etaria / Amostra ($N$):** N = 194 jovens com diagnostico de TDAH encaminhados clinicamente (idade 4-17 anos; M = 10,7 anos, DP = 2,98; 77,3% meninos, 21,1% meninas, 1,5% transgenero ou outro; 56% / n = 108 com historico de absenteismo e n = 86 sem historico)
+- **Publico-alvo Avaliado:** Jovens com TDAH em atendimento ambulatorial avaliados para classificacao de historico de [[Absenteismo_Cronico|absenteismo escolar]]
+- **Fonte dos Dados / Dataset:** Questionario clinico de admissao preenchido por pais/cuidadores entre 2018 e 2020 em uma agencia comunitaria de saude mental infantil localizada em grande cidade canadense
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** Questionario institucional de admissao clinica composto por item binario de historico de absenteismo, checklist de 69 areas problematicas biopsicossocioeducacionais em 8 dominios (Kuder-Richardson 20 = 0,80) e 15 itens de historico diagnostico (totalizando 80 preditores analisados apos exclusao de itens sem variancia)
+- **Natureza da Ferramenta:** Checklist clinico de triagem biopsicossocioeducacional (respostas binarias sim/nao)
+- **Forma de Aplicacao:** Relato dos pais/cuidadores junto a assistente de caso clinico na admissao ambulatorial
+- **Finalidade:** Triagem inicial e estratificacao atuarial do risco de absenteismo escolar em jovens com TDAH
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** [[Random_Forest]]
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Machine Learning Supervisionado (Ensemble Learning) com ranqueamento de importancia de variaveis
+- **Algoritmos Empregados:** [[Random_Forest]] (1.000 arvores, ajuste de `mtry` entre 2 e 80 via pacote `caret` no R 4.3.2; comparacao tentada com Regressao Logistica, que nao convergiu)
+- **Tarefa do Modelo:** Classificacao binaria (com vs. sem historico de absenteismo escolar), avaliada com limiar padrao (0,50) e limiar ajustado para alta sensibilidade (0,42)
+- **Estagio de Deteccao:** Triagem atuarial / alerta precoce prospectivo (embora modelado sobre historico retrospectivo de absenteismo)
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Humor ou pensamentos depressivos, humor ansioso, transtornos comorbidos (ansiedade 43,3%, transtorno desafiador opositivo 34,0%, depressao 13,9%, TEA 13,9%, TOC 8,2%, transtorno de apego 5,2%, transtorno de conduta 4,1%) e isolamento social
+- **Variaveis Comportamentais / Historico:** Comportamento disruptivo/interferente na escola e em casa, vulnerabilidade a comportamentos de risco, dificuldades de aprendizagem, vitimizacao/bullying e historico de absenteismo
+- **Variaveis Familiares / Sociodemograficas:** Parentalidade inconsistente, incapacidade da familia de atender as necessidades do jovem, dinamicas familiares, idade, genero e identidade cultural
+- **Variaveis Institucionais / Contextuais:** Dificuldades de acesso a servicos comunitarios e problemas escolares (nao incluiu variaveis sistemicas como clima escolar ou transporte)
+- **Features Mais Relevantes Identificadas:** Top 6 preditores com escore de importancia > 50 (escala 0-100 por permutacao): (1) comportamento interferente na escola, (2) humor ou pensamentos depressivos, (3) comportamento interferente em casa, (4) parentalidade inconsistente, (5) transtorno de apego e (6) vulnerabilidade a comportamentos de risco; idade e genero nao aumentaram o desempenho (delta AUC = 0,002, p = 0,95)
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** Kuder-Richardson 20 (KR-20) = 0,80 para o checklist de 69 areas problematicas
+- **Metricas Computacionais (ML):** Validacao cruzada no treino (n = 131): AUC = 0,75 (DP = 0,08), Acuracia = 0,69 (vs. No Information Rate 0,56, p < 0,001), Sensibilidade = 0,68, Especificidade = 0,70, Kappa = 0,38. Amostra de teste independente (n = 63): AUC = 0,79 (IC 95% [0,68, 0,90]); com threshold 0,50: Acuracia = 0,73 (p = 0,003), Sensibilidade = 0,76 (Tabela 3) / 0,74 (texto), Especificidade = 0,69 (Tabela 3) / 0,71 (texto), Kappa = 0,46; com threshold 0,42: Sensibilidade = 0,80, Especificidade = 0,57, Acuracia = 0,70
+- **Estrategia de Validacao:** Split aleatorio estratificado 67% treino (n = 131) / 33% teste independente (n = 63) e validacao cruzada 5-fold repetida 5 vezes no treino
+- **Desafios Metodologicos Relatados:** Tamanho amostral relativamente reduzido para ML (N = 194), nao convergencia da regressao logistica com elevado numero de preditores, ausencia de definicao operacional formal de absenteismo no item de entrada e respostas binarias que limitam granularidade
+- **Aspectos Eticos e Transparencia (XAI):** Aprovacao por IRB e consentimento informado; codigo em R disponivel no Open Science Framework (OSF); interpretabilidade via escores de importancia de variaveis por permutacao
+- **Limitacoes Declaradas:** Amostra clinica pequena e predominantemente masculina (77,3% meninos), restringindo generalizacao para amostras comunitarias ou meninas; dados transversais e retrospectivos baseados apenas no relato dos pais/cuidadores sem confirmacao clinica independente dos diagnosticos; ausencia de fatores sistemicos (qualidade da escola, clima escolar, transporte)
+- **Direcoes Futuras:** Validar prospectivamente em amostras maiores, mais diversas e comunitarias; incorporar dados multi-informantes e fatores sistemicos escolares; avaliar utilidade incremental e viabilidade em fluxos reais de clinicas e escolas
 
 ---
 
@@ -123,12 +123,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Objetivo e quatro hipoteses explicitamente definidos para classificacao de absenteismo em jovens com TDAH via Random Forest. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Amostra (N = 194), instrumento (KR-20 = 0,80), split estratificado 67/33, 5x5-fold CV, 1.000 arvores e ajuste de `mtry` descritos de forma replicavel (codigo no OSF). |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 2 | Reporta KR-20 = 0,80, AUC-ROC (0,75 CV / 0,79 teste), Acuracia, Sensibilidade, Especificidade, Kappa e VPP/VPN. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Analisa 80 variaveis biopsicossocioeducacionais e diagnosticos comorbidos, identificando depressao, comportamento disruptivo, parentalidade inconsistente e apego. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Discute detalhadamente vies do relato parental unico, amostra clinica masculina, natureza transversal/retrospectiva e ausencia de fatores sistemicos. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **10 / 10** | |
 
 ---
 

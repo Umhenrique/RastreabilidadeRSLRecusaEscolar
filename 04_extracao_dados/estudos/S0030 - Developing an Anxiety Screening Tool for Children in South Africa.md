@@ -7,8 +7,8 @@ database: "Scopus"
 venue: "JMIR Research Protocols"
 doi: "10.2196/37364"
 url: "https://www.scopus.com/pages/publications/85139725821?origin=resultslist"
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 7
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
 outcome_scope: "Predição de Risco de Abandono Escolar no K-12"
@@ -23,9 +23,8 @@ rqs:
   - "[[RQ3_Variaveis_Socioemocionais|RQ3]]"
   - "[[RQ4_Metricas_e_Desafios|RQ4]]"
 scales:
+  - "[[SCARED]]"
 algorithms:
-  - "[[Early_Warning_Systems]]"
-  - "[[Explicabilidade_XAI]]"
 tags:
   - rsl/estudo
   - rsl/fase2_leitura_completa
@@ -42,7 +41,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.2196/37364](https://doi.org/10.2196/37364)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85139725821?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -67,51 +66,51 @@ tags:
 - **Titulo Completo:** Developing an Anxiety Screening Tool for Children in South Africa: Protocol for a Mixed Methods Study
 - **Autores:** Fatiema Benjamin, Babatope O. Adebiyi, Edna Rich, Nicolette Vanessa Roman
 - **Ano de Publicacao:** 2022
-- **Tipo de Publicacao:** Periodico / Conferencia
+- **Tipo de Publicacao:** Periodico (Protocolo de Pesquisa revisado por pares)
 - **Nome do Veiculo:** JMIR Research Protocols
 - **DOI:** [10.2196/37364](https://doi.org/10.2196/37364)
 - **Base de Dados:** Scopus
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Africa do Sul (Provincia de Western Cape)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Ensino Fundamental Inicial)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Predição de Risco de Abandono Escolar no K-12
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Infantil e Ensino Fundamental Inicial (Preschool e Foundation Phase)
+- **Faixa Etaria / Amostra ($N$):** Populacao-alvo: criancas de 4 a 8 anos (nao respondentes diretos). Amostra planejada do protocolo: Estagio 1 (revisao de escopo); Estagio 2 (N ~ 60 participantes em entrevistas: pais/cuidadores, professores e especialistas dos 6 distritos); Estagio 3 (N ~ 20 especialistas em painel e-Delphi); Estagio 4 (estudo piloto com estimativa de N ~ 400 professores de pre-escola e fase inicial, ~67 por distrito).
+- **Publico-alvo Avaliado:** Criancas de 4 a 8 anos em risco de ansiedade infantil na Africa do Sul (avaliadas por professores, pais e especialistas)
+- **Fonte dos Dados / Dataset:** Dados primarios planejados via revisao de escopo (Academic Search Complete, APA PsycArticles, CINAHL Plus, ERIC, MEDLINE), entrevistas semiestruturadas, rodadas e-Delphi online (Google Chat) e aplicacao piloto presencial/online do instrumento desenvolvido.
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** Proposta de nova ferramenta de triagem de ansiedade infantil para criancas sul-africanas (4-8 anos), ainda sem nome definitivo; referencia ferramentas internacionais existentes como [[SCARED]] (Screen for Anxiety-Related Disorders), SCAS (Spence Children's Anxiety Scale) e PAS (Preschool Anxiety Scale).
+- **Natureza da Ferramenta:** Questionario de triagem / instrumento psicometrico em desenvolvimento (metodos mistos sequenciais exploratorios com abordagem participativa PAR).
+- **Forma de Aplicacao:** Relato dos professores (administrado por professores de pre-escola e fase inicial, com consentimento previo dos pais e da crianca), informado previamente por entrevistas com pais, cuidadores, professores e especialistas.
+- **Finalidade:** Triagem inicial precoce de sintomas de ansiedade infantil no contexto escolar para encaminhamento a servicos de tratamento.
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** [[Early_Warning_Systems]], [[Explicabilidade_XAI]]
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** N/A (Protocolo de pesquisa qualitativa e psicometrica tradicional; nao emprega IA ou Machine Learning).
+- **Algoritmos Empregados:** N/A (Analise tematica indutiva de Braun e Clarke para dados qualitativos/e-Delphi; testes estatisticos em SPSS 28: Shapiro-Wilk, teste de esfericidade de Bartlett, KMO e Analise Fatorial Exploratoria no Estagio 4).
+- **Tarefa do Modelo:** N/A (Desenvolvimento e validacao estrutural de escala de triagem).
+- **Estagio de Deteccao:** Triagem preventiva / identificacao precoce na primeira infancia (4-8 anos), antes de desfechos futuros como evasao escolar na adolescencia.
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Sintomas de ansiedade infantil (ansiedade generalizada, ansiedade de separacao, fobia social, fobia escolar, panico), temperamento infantil, inibicao comportamental e sofrimento emocional.
+- **Variaveis Comportamentais / Historico:** Dificuldades de aprendizagem, problemas comportamentais na escola, comportamento agressivo na transicao casa-escola, dificuldade de engajamento com pares e conteudo educacional, bullying e rejeicao; evasao escolar e abuso de substancias citados como consequencias tardias.
+- **Variaveis Familiares / Sociodemograficas:** Trauma na primeira infancia, exposicao a violencia, pobreza, controle psicologico parental, superprotecao e estilo parental, psicopatologia materna, conflito familiar, negligencia/abuso infantil e falta de relacoes proximas com adultos.
+- **Variaveis Institucionais / Contextuais:** Contexto multicultural e multilingue sul-africano (ingles, afrikaans, isiXhosa), transicao para nova escola, ambiente escolar e politicas de saude mental infantil e adolescente (CAMH).
+- **Features Mais Relevantes Identificadas:** N/A (protocolo em andamento; fatores e itens serao definidos nas etapas qualitativas, e-Delphi e analise fatorial).
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** Planejadas para o Estagio 4: consistencia interna, validade de face, conteudo, criterio (concorrente e preditiva) e construto (convergente, discriminante e divergente), normalidade (Shapiro-Wilk), adequacao amostral (KMO), esfericidade de Bartlett e Analise Fatorial Exploratoria (EFA). Ainda sem valores empiricos obtidos.
+- **Metricas Computacionais (ML):** N/A.
+- **Estrategia de Validacao:** Validacao sequencial em 4 estagios: revisao de escopo (PRISMA-ScR), entrevistas qualitativas ate saturacao, consenso e-Delphi com 20 especialistas e piloto quantitativo com amostragem aleatoria estratificada por distrito.
+- **Desafios Metodologicos Relatados:** Ausencia de ferramenta culturalmente adaptada ao contexto multilingue sul-africano; falta de definicao desenvolvimental universal da ansiedade infantil no DSM-5; restricoes da pandemia de COVID-19 na coleta presencial; baixa implementacao provincial de politicas CAMH.
+- **Aspectos Eticos e Transparencia (XAI):** Aprovacao etica obtida (BM21/9/12, University of the Western Cape), consentimento informado de pais e criancas, anonimato via pseudonimos, protecao por senha dos dados, encaminhamento para servicos de aconselhamento gratuito em caso de desconforto emocional e protocolos sanitarios de COVID-19.
+- **Limitacoes Declaradas:** A ferramenta nao sera aplicada diretamente as criancas como respondentes (apenas via professores), e o projeto nao possui delineamento longitudinal, impossibilitando monitorar a efetividade da ferramenta ao longo do tempo.
+- **Direcoes Futuras:** Execucao das etapas empiricas (coleta qualitativa, e-Delphi e piloto), refinamento/descarte de itens problematicos via EFA, disseminacao para subsidiar politicas publicas de saude mental infantil (CAMH) na Africa do Sul e realizacao de estudos longitudinais futuros.
 
 ---
 
@@ -120,12 +119,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Objetivo explicitamente definido: explorar percepcoes sobre ansiedade infantil e desenvolver uma ferramenta de triagem para criancas de 4 a 8 anos na Africa do Sul. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Desenho misto sequencial exploratorio em 4 estagios (PRISMA-ScR, entrevistas com N=60, e-Delphi com N=20, piloto estratificado com N~400) detalhado de forma replicavel. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | Por se tratar de um protocolo de estudo publicado antes da conclusao da coleta, nao apresenta resultados empiricos nem metricas de validacao obtidas. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 1 | Analisa fatores psicologicos, parentais, traumaticos e culturais da ansiedade infantil, mencionando evasao escolar como desfecho futuro, mas sem foco direto em recusa escolar. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Discute explicitamente limitacoes na secao dedicada: ausencia de autorrelato infantil e ausencia de acompanhamento longitudinal. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **7 / 10** | |
 
 ---
 

@@ -7,8 +7,8 @@ database: "Scopus"
 venue: "Behavioral Sciences"
 doi: "10.3390/bs16071225"
 url: "https://www.scopus.com/pages/publications/105045792956?origin=resultslist"
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 10
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Modelagem Analítico-Preditiva / Network Analysis"
 outcome_scope: "Rastreio e Diagnóstico de Recusa Escolar / EBSA"
@@ -23,6 +23,8 @@ rqs:
   - "[[RQ3_Variaveis_Socioemocionais|RQ3]]"
   - "[[RQ4_Metricas_e_Desafios|RQ4]]"
 scales:
+  - "[[SCREEN]]"
+  - "GBS"
 algorithms:
 tags:
   - rsl/estudo
@@ -40,7 +42,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3390/bs16071225](https://doi.org/10.3390/bs16071225)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105045792956?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -65,51 +67,51 @@ tags:
 - **Titulo Completo:** Belongingness and School Refusal in Adolescents: Psychometric Validation and Identification of Risk Profiles
 - **Autores:** María Pérez-Marco, Carolina Gonzálvez, Andrea Fuster, Ángel Amat, Alba Lorenzo-Rumbo, Graciela Arráez-Vera
 - **Ano de Publicacao:** 2026
-- **Tipo de Publicacao:** Periodico / Conferencia
-- **Nome do Veiculo:** Behavioral Sciences
+- **Tipo de Publicacao:** Periodico (Artigo Original)
+- **Nome do Veiculo:** Behavioral Sciences (16, 1225)
 - **DOI:** [10.3390/bs16071225](https://doi.org/10.3390/bs16071225)
 - **Base de Dados:** Scopus
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Espanha (Provincia de Alicante)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Adolescentes)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Rastreio e Diagnóstico de Recusa Escolar / EBSA
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Basica (Ensino Secundario Obrigatorio e Pos-Obrigatorio)
+- **Faixa Etaria / Amostra ($N$):** N = 690 adolescentes de 12 a 17 anos (Mage = 14,21; DP = 1,42; 50,4% meninos, 48,3% meninas, 1,3% outro genero), selecionados de 802 iniciais em 6 escolas secundarias (publicas e privadas) apos exclusoes e remocao de 7 outliers multivariados.
+- **Publico-alvo Avaliado:** Adolescentes escolares avaliados quanto ao pertencimento social geral e risco de [[Recusa_Escolar|recusa escolar]]
+- **Fonte dos Dados / Dataset:** Questionarios de autorrelato aplicados em sala de aula durante o horario escolar (predominantemente via Google Forms com resposta forcada, e versao impressa quando sem acesso digital).
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** General Belongingness Scale (GBS; Malone et al., 2012; versao espanhola de Checa & Oberst, 2022; 12 itens em 2 fatores: Acceptance/Inclusion e Rejection/Exclusion, Likert 0-6) e [[SCREEN]] (School Refusal Evaluation Scale; Gallé-Tessonneau & Gana, 2019; versao espanhola de Pérez-Marco et al., 2026; 18 itens em 4 fatores: Anxious anticipation, Difficult transition, Interpersonal discomfort, School avoidance, Likert 1-5).
+- **Natureza da Ferramenta:** Instrumentos psicometricos tradicionais (escalas de autorrelato validadas).
+- **Forma de Aplicacao:** Autorrelato do aluno em contexto escolar, anonimo e voluntario, com presenca de pesquisador.
+- **Finalidade:** Validacao psicometrica e invariancia fatorial da GBS em adolescentes espanhois, validade convergente com recusa escolar (SCREEN) e identificacao de perfis socioemocionais de risco para intervencao preventiva.
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** *(Identificar na leitura ou N/A)*
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Analise Estatistica Avancada / Modelagem Centrada na Pessoa (Latent Profile Analysis - LPA) e Modelagem de Equacoes Estruturais (CFA/MGCFA). Nao utiliza ML supervisionado.
+- **Algoritmos Empregados:** Confirmatory Factor Analysis (CFA com Maximum Likelihood e bootstrap de 5000 reamostragens no AMOS 28), Multigroup CFA (MGCFA), Latent Profile Analysis (LPA no Mplus 8.10) e MANOVA com testes post hoc de Bonferroni (SPSS 28).
+- **Tarefa do Modelo:** Clustering latente (identificacao de 4 perfis de pertencimento: Highly Excluded, Socially Disconnected, Mixed Belonging e Highly Included) e comparacao multivariada de escores de recusa escolar.
+- **Estagio de Deteccao:** Triagem preventiva e identificacao precoce de perfis de vulnerabilidade socioemocional antes do agravamento da evitacao escolar ([[Early_Warning_Systems|integracao sugerida em EWS escolares]]).
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Pertencimento geral (inclusao/aceitacao vs. exclusao/rejeicao), antecipacao ansiosa, transicao dificil, desconforto interpessoal, evitacao escolar, solidao e afeto negativo.
+- **Variaveis Comportamentais / Historico:** Faltas/evitacao escolar autorrelatada (subescala School avoidance do SCREEN).
+- **Variaveis Familiares / Sociodemograficas:** Idade (12-17 anos) e genero (meninos, meninas e outro genero).
+- **Variaveis Institucionais / Contextuais:** Tipo de escola (publica e privada), distribuicao geografica em Alicante e discussao sobre clima escolar e vitimizacao por pares.
+- **Features Mais Relevantes Identificadas:** O perfil Highly Excluded (17,2%; z_Inclusao = -1,05, z_Exclusao = 1,59) apresentou os maiores escores em todas as dimensoes da SCREEN, com destaque para Anxious anticipation (M = 3,58 vs. M = 1,03 no Highly Included; d = 1,15), Interpersonal discomfort (M = 5,82 vs. 3,81; d = 0,68) e School avoidance (M = 3,14 vs. 1,55; d = 0,69). Exclusao correlacionou-se positivamente com Anxious anticipation (r = 0,40, p < 0,001).
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** GBS CFA (M3): chi2/df = 2,953, RMSEA = 0,053 (IC 90%: 0,044-0,063), SRMR = 0,039, CFI = 0,958, TLI = 0,947, AIC = 206,491, BIC = 319,908. Confiabilidade GBS: Inclusion (alfa = 0,81, omega = 0,81, CR = 0,82); Exclusion (alfa = 0,78, omega = 0,78, CR = 0,79). Invariancia de genero: configural, metrica (Delta CFI = 0,003), escalar (Delta CFI = 0,009) e estrita parcial. SCREEN: alfa = 0,71-0,74, omega = 0,73-0,74. LPA (4 perfis): Entropia = 0,825, AIC = 3153,264, BIC = 3211,836, LRT/BLRT p < 0,001. MANOVA: Wilks' lambda = 0,83, F(3, 686) = 10,86, p < 0,001, eta_p2 = 0,06.
+- **Metricas Computacionais (ML):** N/A.
+- **Estrategia de Validacao:** Comparacao de 4 modelos fatoriais (M0-M3), analise classica de itens, MGCFA por genero, validade convergente via correlacoes de Pearson com SCREEN, selecao de modelo LPA via AIC/BIC/entropia/LRT/BLRT e tamanho minimo de cluster (>= 25).
+- **Desafios Metodologicos Relatados:** Ausencia de normalidade multivariada (mitigada com bootstrap de 5000 reamostragens); remocao de 7 outliers multivariados (Mahalanobis); grupo nao binario (n = 9) insuficiente para MGCFA.
+- **Aspectos Eticos e Transparencia (XAI):** Aprovacao etica pela Universidade de Alicante (UA-2023-06-29-4), conformidade com Declaracao de Helsinki, consentimento informado dos pais e assentimento dos adolescentes, participacao anonima e voluntaria.
+- **Limitacoes Declaradas:** Uso exclusivo de autorrelato; amostra de um unico contexto cultural (Alicante, Espanha); subgrupos reduzidos aos 17 anos; desenho transversal impede inferencias causais; exclusao de identidades de genero nao binarias na MGCFA; ausencia de abordagem mista (qualitativa).
+- **Direcoes Futuras:** Estudos longitudinais e em outros paises de lingua espanhola; inclusao de amostras maiores com diversidade de genero; investigacao de vitimizacao por pares (bullying) como mediador/moderador; integracao da GBS em sistemas escolares de alerta precoce e programas de apoio entre pares.
 
 ---
 
@@ -118,12 +120,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Quatro objetivos explicitos e seis hipoteses claramente formuladas sobre validacao da GBS, invariancia de genero, validade convergente com SCREEN e perfis latentes. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Amostragem aleatoria por conglomerados multiestagio, tratamento de outliers (Mahalanobis), CFA com bootstrap, MGCFA e criterios completos de selecao na LPA. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 2 | Apresenta CFI, TLI, RMSEA, SRMR, alfa de Cronbach, omega de McDonald, CR, entropia, LRT/BLRT, Wilks' lambda e tamanhos de efeito (d de Cohen). |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Aprofunda o papel do pertencimento (inclusao/exclusao), antecipacao ansiosa, desconforto interpessoal e clima escolar na vulnerabilidade a recusa escolar. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Discute vies de autorrelato, generalizacao cultural, tamanho de subgrupos etarios, corte transversal e limitacao da MGCFA para genero nao binario. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **10 / 10** | |
 
 ---
 

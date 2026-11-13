@@ -7,8 +7,8 @@ database: "Scopus"
 venue: "Journal of Medical Artificial Intelligence"
 doi: "10.21037/jmai-24-366"
 url: "https://www.scopus.com/pages/publications/105030280295?origin=resultslist"
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 9
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
 outcome_scope: "Rastreio e Diagnóstico de Recusa Escolar / EBSA"
@@ -23,6 +23,7 @@ rqs:
 scales:
   - "[[SCARED]]"
 algorithms:
+  - "Forward Chaining Expert System (BPMN + AIML)"
 tags:
   - rsl/estudo
   - rsl/fase2_leitura_completa
@@ -39,7 +40,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.21037/jmai-24-366](https://doi.org/10.21037/jmai-24-366)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105030280295?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -68,47 +69,47 @@ tags:
 - **Nome do Veiculo:** Journal of Medical Artificial Intelligence
 - **DOI:** [10.21037/jmai-24-366](https://doi.org/10.21037/jmai-24-366)
 - **Base de Dados:** Scopus
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Estados Unidos (Purdue University Fort Wayne, IN)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (Adolescentes)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Rastreio e Diagnóstico de Recusa Escolar / EBSA
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Basica (Criancas e Adolescentes, 6-18 anos)
+- **Faixa Etaria / Amostra ($N$):** N = 100 participantes no estudo experimental (70 pais de criancas/adolescentes de 6-18 anos, idade media 41,5 anos, DP = 7,2, 65% mulheres; 30 profissionais de saude - pediatras, conselheiros escolares e psicologos infantis, idade media 38,1 anos, DP = 5,8, 70% mulheres)
+- **Publico-alvo Avaliado:** Rastreio e identificacao preliminar de transtornos de ansiedade e [[Recusa_Escolar|evitacao escolar]] em criancas e adolescentes (6-18 anos)
+- **Fonte dos Dados / Dataset:** Dados experimentais anonimizados coletados via interface web do chatbot administrando o questionario SCARED (41 itens) e pesquisa pos-interacao de aceitacao/usabilidade
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** [[SCARED]]
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** [[SCARED]] (Screen for Child Anxiety Related Disorders - 41 itens, versao autorrelato e relato dos pais)
+- **Natureza da Ferramenta:** Ferramenta digitalizada / Questionario de triagem psicometrica integrado a chatbot especialista
+- **Forma de Aplicacao:** Autorrelato do aluno ou relato dos pais via interface conversacional web 24/7
+- **Finalidade:** Triagem inicial / identificacao preliminar de sintomas em 5 categorias de ansiedade, incluindo evitacao escolar significativa (School Avoidance)
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** *(Identificar na leitura ou N/A)*
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Sistema Especialista Baseado em Regras (Medical Expert System) / Chatbot Conversacional
+- **Algoritmos Empregados:** Motor de inferencia por encadeamento para frente (Forward Chaining), modelagem de conhecimento via BPMN (Business Process Model and Notation) convertida em AIML (Artificial Intelligence Markup Language) por modelo de estados finitos
+- **Tarefa do Modelo:** Classificacao multiclasse baseada em regras e limiares clinicos (somatorio de respostas 0/1/2 do SCARED para Panico >=7, Ansiedade Generalizada >=9, Separacao >=5, Fobia Social >=8 e Evitacao Escolar >=3)
+- **Estagio de Deteccao:** Alerta precoce / triagem preventiva preliminar 24/7 para encaminhamento a avaliacao clinica especializada
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Sintomas de transtorno de panico/somaticos (13 itens), ansiedade generalizada (9 itens), ansiedade de separacao (8 itens), fobia social (7 itens) e evitacao escolar significativa (4 itens)
+- **Variaveis Comportamentais / Historico:** Respostas somaticas e evitativas associadas a escola (ex.: dores de cabeca na escola, medo de dormir fora de casa, evitacao de pessoas desconhecidas)
+- **Variaveis Familiares / Sociodemograficas:** Perspectiva parental (versao para pais do SCARED), idade/genero dos avaliadores e experiencia previa com interfaces digitais
+- **Variaveis Institucionais / Contextuais:** Contexto de paises de baixa e media renda (LMICs) e ambientes com escassez de profissionais especializados em saude mental infantil
+- **Features Mais Relevantes Identificadas:** Subescala de Evitacao Escolar do SCARED (itens 2, 11, 17 e 36 com limiar de corte >= 3) e demais 4 subescalas de ansiedade
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** Concordancia com os criterios padronizados de pontuacao do SCARED (92% para ansiedade generalizada e 89% para transtorno de panico; categorizacao correta nas 5 dimensoes incluindo evitacao escolar)
+- **Metricas Computacionais (ML):** Taxa de concordancia com pontuacao esperada do SCARED (89% a 92% reportados) e avaliacao de aceitacao/usabilidade (85% consideraram intuitivo e facil de usar; 90% satisfeitos com o processo e feedback)
+- **Estrategia de Validacao:** Estudo experimental com N = 100 participantes (70 pais e 30 profissionais de saude) recrutados em centro comunitario e convites online, comparando saidas do chatbot aos criterios do SCARED
+- **Desafios Metodologicos Relatados:** Manutencao de contexto em conversas multi-turno, gerenciamento de dialogo para entradas ambiguas, representacao de conhecimento sem dependencia de engenheiros de IA e adaptabilidade linguistica/cultural
+- **Aspectos Eticos e Transparencia (XAI):** Alta transparencia por raciocinio explicito baseado em regras (BPMN-AIML); discussao aprofundada sobre privacidade (GDPR/HIPAA), consentimento parental para menores, risco de sobrediagnostico, medicalizacao de comportamento normal e sobrecarga do sistema de saude
+- **Limitacoes Declaradas:** Identificacao apenas preliminar (nao substitui diagnostico clinico); dependencia da precisao do relato do usuario; necessidade de adaptacao linguistica e cultural; dados empiricos limitados (amostra de 100 participantes)
+- **Direcoes Futuras:** Integrar algoritmos de ML e NLP/NLU para compreensao de linguagem natural, decisoes sensiveis ao contexto clinico, integracao com IoT/wearables e aprendizado continuo da base de conhecimento
 
 ---
 
@@ -117,12 +118,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Objetivo claro de desenvolver e avaliar um chatbot especialista BPMN-AIML baseado no SCARED para triagem de ansiedade e evitacao escolar. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Arquitetura BPMN-AIML, 41 regras do SCARED, limiares de corte e desenho experimental (N = 100, criterios de inclusao/exclusao) descritos de forma replicavel. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 1 | Apresenta concordancia (92% ansiedade generalizada, 89% panico) e usabilidade (85%/90%), mas nao reporta validacao clinica contra diagnostico padrao-ouro nem metricas individuais para evitacao escolar. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Incorpora diretamente a dimensao de evitacao escolar significativa e 4 transtornos de ansiedade do SCARED, alem de fatores de acesso e estigma. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Apresentam secao dedicada a limitacoes e consideracoes eticas (vies de autorrelato, sobrediagnostico, adaptacao cultural, amostra limitada). |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **9 / 10** | |
 
 ---
 

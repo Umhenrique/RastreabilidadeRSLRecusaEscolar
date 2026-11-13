@@ -7,8 +7,8 @@ database: "Web of Science"
 venue: "IMPROVING SCHOOLS"
 doi: "10.1177/13654802231174986"
 url: ""
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 8
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Random Forest / Ensemble Learning"
 outcome_scope: "Predição de Absenteísmo Crônico Escolar"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science']`)
 > - **DOI:** [10.1177/13654802231174986](https://doi.org/10.1177/13654802231174986)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -69,47 +69,47 @@ tags:
 - **Nome do Veiculo:** IMPROVING SCHOOLS
 - **DOI:** [10.1177/13654802231174986](https://doi.org/10.1177/13654802231174986)
 - **Base de Dados:** Web of Science
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Estados Unidos (University of Nevada, Las Vegas; University of Texas at Austin)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Educação Básica (K-12)
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Predição de Absenteísmo Crônico Escolar
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Educacao Basica (K-12)
+- **Faixa Etaria / Amostra ($N$):** N/A - Artigo de revisao/sintese metodologica e de politicas educacionais abrangendo estudantes K-12 em grandes bases analisadas nos estudos revisados
+- **Publico-alvo Avaliado:** Estudantes K-12 em risco de [[Absenteismo_Cronico|absenteismo cronico]] e evasao escolar, com enfase em subgrupos vulneraveis e politicas educacionais locais
+- **Fonte dos Dados / Dataset:** Sintese de estudos baseados em grandes conjuntos de dados educacionais distritais, estaduais e nacionais (EUA, Suecia, Coreia do Sul, Australia, entre outros)
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** N/A (Foca em dados administrativos desagregados, pesquisas de clima escolar e indicadores socioemocionais, nao em um instrumento psicometrico especifico)
+- **Natureza da Ferramenta:** Sistemas de dados analiticos educacionais e levantamentos contextuais locais
+- **Forma de Aplicacao:** Registros escolares longitudinais, entrevistas qualitativas com equipe escolar e questionarios de clima/fatores de risco
+- **Finalidade:** Analise de causa raiz (Root Cause Analysis), aprimoramento de EWS e direcionamento de politicas locais e MTSS
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** SVM, [[Early_Warning_Systems]], [[Random_Forest]]
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Machine Learning Supervisionado, Ensemble Learning, [[Early_Warning_Systems|Early Warning System - EWS]] e Modelagem Estatistica Avancada
+- **Algoritmos Empregados:** Abordagens baseadas em algoritmos: CART, Ensemble Analysis (CHAID), SVM, Boosting, LASSO, ROC Analysis, [[Random_Forest]]; abordagens baseadas em modelos: Multilevel Modeling, SEM, Latent Class Analysis (LCA) e Meta-analytic Modeling; aplicados a [[Early_Warning_Systems]]
+- **Tarefa do Modelo:** Classificacao de risco de absenteismo cronico e evasao, segmentacao de perfis/subgrupos e identificacao de causas raiz locais
+- **Estagio de Deteccao:** Alerta precoce / deteccao preventiva (EWS desagregado e adaptado a condicoes locais, integrado a Tiers 1, 2 e 3 de MTSS)
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Sintomas internalizantes, problemas de saude mental, disturbio emocional grave, comportamento externalizante e aprendizagem socioemocional (SEL)
+- **Variaveis Comportamentais / Historico:** Faltas nao autorizadas, atrasos, saidas antecipadas, GPA, historico de suspensoes/expulsoes, reprovacao, participacao extracurricular e engajamento escolar
+- **Variaveis Familiares / Sociodemograficas:** Pobreza/baixa renda, inseguranca habitacional e alimentar, violencia na vizinhanca, escolaridade parental, familia monoparental, raca/etnia, status de migrante e elegibilidade a IEP/educacao especial
+- **Variaveis Institucionais / Contextuais:** Clima escolar, seguranca na escola, rotatividade docente, transporte escolar, politicas punitivas de tolerancia zero e mobilidade/mudancas de escola
+- **Features Mais Relevantes Identificadas:** Variam conforme localidade e severidade: GPA baixo, suspensoes, idade avancada para a serie, mudanca de escola, inseguranca habitacional/alimentar, clima escolar negativo, sintomas internalizantes/externalizantes e participacao extracurricular
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** Tamanhos de efeito em modelagem meta-analitica e indices de ajuste em SEM (citados dos estudos sintetizados)
+- **Metricas Computacionais (ML):** Menciona uso de curvas ROC/AUC e desempenho diferencial (ex.: Random Forest prevendo melhor nao-evasao do que evasao), sem tabela comparativa de metricas numericas proprias
+- **Estrategia de Validacao:** Revisao narrativa/sintese de estudos empiricos baseados em algoritmos e modelos aplicados a politicas educacionais
+- **Desafios Metodologicos Relatados:** Distorcao por uso de dados agregados (perda de variacao individual e mascaramento de disparidades), baixa qualidade e manipulacao de registros de faltas, arbitrariedade do limiar de 10% e instabilidade de indicadores entre subgrupos e series
+- **Aspectos Eticos e Transparencia (XAI):** Enfase em interseccionalidade, reducao de politicas punitivas desproporcionais contra grupos minoritarios, uso de dados desagregados para equidade e traducao transparente para formuladores de politicas
+- **Limitacoes Declaradas:** Dificuldade de implementacao de estrategias analiticas sofisticadas em escolas com restricoes orcamentarias; transformacoes recentes (ensino hibrido/virtual pos-pandemia, crises climaticas) que exigem novas definicoes e metricas de frequencia
+- **Direcoes Futuras:** Integrar sistemas interagencias em tempo real com dashboards acessiveis, combinar dados quantitativos e qualitativos, calibrar limiares empiricos locais para MTSS e investigar impactos do ensino virtual/hibrido
 
 ---
 
@@ -118,12 +118,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Objetivo claro de sintetizar estrategias analiticas baseadas em algoritmos e modelos para traduzir em politicas educacionais, EWS e MTSS. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 1 | Organizacao clara entre metodos algoritmo-baseados e modelo-baseados, porem revisao narrativa sem protocolo sistematico de busca/selecao. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 1 | Cita aplicacoes de ROC/AUC e modelos sintetizados, sem apresentar benchmark quantitativo comparativo proprio. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Analisa amplamente fatores socioemocionais, clima escolar, pobreza, saude mental e mecanismos contextuais do absenteismo. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 2 | Discute criticamente limitacoes de dados agregados, manipulacao de registros, vieses em politicas punitivas e desafios pos-pandemia. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **8 / 10** | |
 
 ---
 

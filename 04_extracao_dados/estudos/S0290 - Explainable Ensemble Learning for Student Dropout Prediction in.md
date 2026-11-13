@@ -7,8 +7,8 @@ database: "IEEE Xplore"
 venue: "2026 IEEE 5th International Maghreb Meeting of the Conference on Sciences and Techniques of Automatic Control and Computer Engineering (MI-STA)"
 doi: "10.1109/MI-STA68962.2026.11511168"
 url: ""
-status: "[Pendente Leitura Completa]"
-qa_score: 0
+status: "[Incluido Fase 2 - Extracao Concluida]"
+qa_score: 9
 population_scope: "Ensino Secundário / Médio"
 intervention_scope: "Ensemble Learning (XGBoost/RF) + XAI (LIME)"
 outcome_scope: "Risco de Evasão Escolar + Fatores de Estresse e Ansiedade"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `IEEE Xplore` (Bases: `['IEEE Xplore']`)
 > - **DOI:** [10.1109/MI-STA68962.2026.11511168](https://doi.org/10.1109/MI-STA68962.2026.11511168)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
 
 ---
 
@@ -70,47 +70,47 @@ tags:
 - **Nome do Veiculo:** 2026 IEEE 5th International Maghreb Meeting of the Conference on Sciences and Techniques of Automatic Control and Computer Engineering (MI-STA)
 - **DOI:** [10.1109/MI-STA68962.2026.11511168](https://doi.org/10.1109/MI-STA68962.2026.11511168)
 - **Base de Dados:** IEEE Xplore
-- **Pais/Regiao de Realizacao do Estudo:** *(Preencher durante leitura completa)*
+- **Pais/Regiao de Realizacao do Estudo:** Libia (Sabha, regiao de Fezzan)
 
 ---
 
 ## 2. Caracterizacao da Populacao e Contexto (PICOC)
-- **Nivel Educacional:** Ensino Secundário / Médio
-- **Faixa Etaria / Amostra ($N$):** *(Ex: N = 1.250 estudantes, 12-16 anos)*
-- **Publico-alvo Avaliado:** Risco de Evasão Escolar + Fatores de Estresse e Ansiedade
-- **Fonte dos Dados / Dataset:** *(Ex: Sistema de Gestao Escolar, registros clinicos, questionarios)*
+- **Nivel Educacional:** Ensino Secundario / Medio (transicao para o ensino superior)
+- **Faixa Etaria / Amostra ($N$):** N = 1.158 estudantes do ensino medio (de populacao de 2.635 examinandos em 5 escolas, 2023; faixas de 17-18 e 19-22 anos; 1.129 registros rotulados na distribuicao final: 84,0% [949] continuam vs. 16,0% [180] risco de evasao)
+- **Publico-alvo Avaliado:** Estudantes concluintes do ensino secundario em contexto afetado por conflito armado (risco de evasao / nao-matricula no ensino superior)
+- **Fonte dos Dados / Dataset:** Questionario estruturado de 34 itens aplicado em 5 escolas de Sabha, Libia (2023), adaptado de estudos previos para o contexto sociocultural local
 
 ---
 
 ## 3. Extracao Orientada as Questoes de Pesquisa (RQs)
 
 ### [[RQ1_Instrumentos_Psicometricos|RQ1: Ferramentas, Escalas ou Instrumentos Psicometricos]]
-- **Nome do Instrumento/Escala:** *(Identificar na leitura ou N/A)*
-- **Natureza da Ferramenta:** (Instrumento psicometrico tradicional / Escala clinica / Ferramenta digitalizada / Questionario de triagem)
-- **Forma de Aplicacao:** (Autorrelato do aluno / Relato dos pais / Relato dos professores / Entrevista clinica)
-- **Finalidade:** (Diagnostico diferencial / Triagem inicial / Avaliacao de evolucao)
+- **Nome do Instrumento/Escala:** Questionario estruturado de 34 itens (adaptado) + 4 indices compostos engenheirados (PES, SCI, RAS, SAI); sem escala clinica padronizada (ex.: SRAS-R/SCARED)
+- **Natureza da Ferramenta:** Questionario de triagem multidimensional (6 categorias de atributos) e indicadores compostos
+- **Forma de Aplicacao:** Autorrelato do aluno
+- **Finalidade:** Triagem inicial e perfilamento exploratorio de risco de evasao / nao-transicao
 
 ### [[RQ2_Modelos_IA_e_Predicao|RQ2: Abordagens Computacionais e de Inteligencia Artificial]]
-- **Tipo de Abordagem:** (Machine Learning Supervisionado / Nao Supervisionado / Deep Learning / Early Warning System - EWS / Analise Estatistica Avancada / XAI)
-- **Algoritmos Empregados:** [[Explicabilidade_XAI]], [[Random_Forest]], [[XGBoost]]
-- **Tarefa do Modelo:** (Classificacao binaria [risco sim/nao] / Regressao [probabilidade de infrequencia] / Clustering [perfis de comportamento])
-- **Estagio de Deteccao:** (Alerta precoce / deteccao preventiva vs. diagnostico a posteriori)
+- **Tipo de Abordagem:** Machine Learning Supervisionado (Ensemble Learning: Bagging e Boosting) com IA Explicavel ([[Explicabilidade_XAI]] via LIME), selecao de features (LASSO, RFE, Mutual Information, Chi-Squared) e balanceamento SMOTE ([[Early_Warning_Systems]])
+- **Algoritmos Empregados:** [[XGBoost]], [[Random_Forest]], LASSO, [[Explicabilidade_XAI]] (LIME)
+- **Tarefa do Modelo:** Classificacao binaria (`Continued Enrollment` vs. `Dropped Out`) sobre variavel-alvo sintetica construida por heuristicas baseadas em regras
+- **Estagio de Deteccao:** Alerta precoce / deteccao preventiva (perfilamento exploratorio de risco na transicao ensino medio-superior)
 
 ### [[RQ3_Variaveis_Socioemocionais|RQ3: Variaveis e Features Consideradas]]
-- **Variaveis Psicologicas/Socioemocionais:** (Ansiedade de separacao, ansiedade social, depressao, estresse, regulacao emocional, somatizacao)
-- **Variaveis Comportamentais / Historico:** (Padrao de faltas/atrasos, historico de notas, engajamento escolar, conflitos, bullying)
-- **Variaveis Familiares / Sociodemograficas:** (Estrutura familiar, dinamica parental, renda, historico medico)
-- **Variaveis Institucionais / Contextuais:** (Clima escolar, relacao professor-aluno, localizacao da escola)
-- **Features Mais Relevantes Identificadas:** (Feature importance / SHAP / coeficientes principais)
+- **Variaveis Psicologicas/Socioemocionais:** Stress and Anxiety Index (SAI: frequencia de ansiedade, disciplinas dificeis, estresse autoavaliado), ansiedade nos estudos, motivacao para aprender, aspiracao ao ensino superior, bem-estar fisico/saude
+- **Variaveis Comportamentais / Historico:** Faltas (1-7, 8-20, >20 dias), horas de estudo (<2, 2-5, >5h), historico de reprovacoes, Student Commitment Index (SCI), socializacao com amigos, engajamento em ensino a distancia
+- **Variaveis Familiares / Sociodemograficas:** Parental Engagement Score (PES), escolaridade e ocupacao materna/paterna, estado civil dos pais, coesao familiar, suporte financeiro, tamanho da familia, genero, idade, area residencial
+- **Variaveis Institucionais / Contextuais:** Tipo de escola (publica/privada/homeschool), tempo de deslocamento, eficacia docente, acesso a internet, posse de dispositivo eletronico (RAS), aulas particulares, contexto de conflito armado
+- **Features Mais Relevantes Identificadas:** Consenso entre >=3 seletores: PES, SCI, SAI, desejo de cursar ensino superior, motivacao para aprender, engajamento em ensino a distancia, eficacia dos professores, socializacao com amigos e bem-estar fisico. No LIME: deslocamento >=30 min, posse de dispositivo, ansiedade nos estudos, eficacia docente e tutoria privada
 
 ### [[RQ4_Metricas_e_Desafios|RQ4: Metricas de Avaliacao, Desempenho e Limitacoes]]
-- **Metricas Psicometricas:** (Alfa de Cronbach, Omega de McDonald, Validade convergente/discriminante)
-- **Metricas Computacionais (ML):** (Acuracia, Sensibilidade/Recall, Precisao, F1-Score, AUC-ROC, MCC)
-- **Estrategia de Validacao:** (K-Fold Cross-validation, split temporal treino/teste, validacao externa)
-- **Desafios Metodologicos Relatados:** (Desbalanceamento de classes, dados faltantes/ruidosos, tamanho restrito da amostra)
-- **Aspectos Eticos e Transparencia (XAI):** (Privacidade dos dados dos alunos, interpretabilidade do modelo, mitigacao de vies)
-- **Limitacoes Declaradas:** 
-- **Direcoes Futuras:** 
+- **Metricas Psicometricas:** N/A (nao reporta Alfa de Cronbach ou validade fatorial do questionario)
+- **Metricas Computacionais (ML):** XGBoost: Acuracia = 0,941, Precisao = 0,941, Recall = 0,941, F1-Score = 0,941, LogLoss = 0,161, CV Accuracy = 0,940, CV F1 = 0,939. Random Forest: Acuracia = 0,939, Precisao = 0,939, Recall = 0,939, F1-Score = 0,939, LogLoss = 0,161, CV Accuracy = 0,935, CV F1 = 0,934
+- **Estrategia de Validacao:** Split estratificado 70% treino / 30% teste + GridSearchCV com 10-fold cross-validation
+- **Desafios Metodologicos Relatados:** Ausencia de rotulos reais (ground truth) exigindo alvo sintetico por regras; desbalanceamento de classes (84% vs. 16%) mitigado com SMOTE; risco de overfitting tratado com regularizacao e profundidade limitada (XGBoost `max_depth=3`)
+- **Aspectos Eticos e Transparencia (XAI):** Uso de LIME ([[Explicabilidade_XAI]]) para explicabilidade local por estudante, mitigando o problema de caixa-preta e apoiando intervencoes direcionadas
+- **Limitacoes Declaradas:** Dependencia de variavel-alvo sintetica baseada em heuristicas; as metricas refletem o aprendizado do proxy baseado em regras, e nao uma previsao definitiva das taxas reais de evasao
+- **Direcoes Futuras:** Validacao com dados longitudinais reais de evasao e implementacao de politicas de apoio psicossocial, engajamento parental e suporte socioeconomico
 
 ---
 
@@ -119,12 +119,12 @@ tags:
 
 | Criterio | Avaliacao | Nota (0-2) | Justificativa / Trecho do Artigo |
 |:---|:---|:---:|:---|
-| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 0 | |
-| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 0 | |
-| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 0 | |
-| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 0 | |
-| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 0 | |
-| **TOTAL** | **Pontuacao de Rigor Metodologico** | **/ 10** | |
+| **QA1 (Clareza do Objetivo)** | O objetivo do estudo ou o desenvolvimento da ferramenta esta claramente definido? | 2 | Define claramente o objetivo de estabelecer framework explicavel de ML para perfilamento exploratorio de risco de evasao / nao-transicao em Sabha, Libia. |
+| **QA2 (Rigor Metodologico)** | Metodologia de coleta de dados, amostra ou arquitetura do modelo descrita de forma replicavel? | 2 | Detalha amostra (N=1.158), questionario (34 itens), formulas dos 4 indices compostos, alvo sintetico, SMOTE, selecao LASSO, split 70/30, 10-fold GridSearchCV, hiperparametros e LIME. |
+| **QA3 (Validacao e Desempenho)** | Apresenta metricas claras de validacao (Acuracia, F1, Cronbach, etc.)? | 2 | Reporta Acuracia, Precisao, Recall, F1-Score, LogLoss, CV Accuracy e CV F1 para XGBoost e Random Forest, alem de comparacao entre 4 tecnicas de selecao de features. |
+| **QA4 (Fatores Socioemocionais)** | Ha analise aprofundada dos fatores psicologicos ou contextuais associados a recusa escolar? | 2 | Analisa estresse e ansiedade (SAI), motivacao, aspiracoes, coesao familiar, engajamento parental (PES), socializacao e o impacto do conflito armado. |
+| **QA5 (Limitacoes e Vies)** | Os autores discutem limitacoes metodologicas, restricoes da amostra ou vieses? | 1 | Reconhece explicitamente a limitacao da variavel-alvo sintetica (proxy heuristico sem ground truth real), mas nao discute o potencial vazamento entre features e regras do alvo ou vieses de autorrelato. |
+| **TOTAL** | **Pontuacao de Rigor Metodologico** | **9 / 10** | |
 
 ---
 
