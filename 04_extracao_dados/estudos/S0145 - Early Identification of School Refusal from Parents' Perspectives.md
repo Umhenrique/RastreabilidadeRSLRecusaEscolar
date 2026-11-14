@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Education Sciences"
 doi: "10.3390/educsci15091211"
 url: "https://www.scopus.com/pages/publications/105017420477?origin=resultslist"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]"
 qa_score: 9
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Sistemas de Alerta Precoce (EWS) baseados em IA"
@@ -39,7 +39,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3390/educsci15091211](https://doi.org/10.3390/educsci15091211)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105017420477?origin=resultslist)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]`
 
 ---
 

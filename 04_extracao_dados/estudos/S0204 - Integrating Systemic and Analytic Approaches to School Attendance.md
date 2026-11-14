@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "CHILD & YOUTH CARE FORUM"
 doi: "10.1007/s10566-020-09591-0"
 url: ""
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC1 (Revisao integrativa - usar no referencial teorico)]"
 qa_score: 8
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Sistemas de Alerta Precoce (EWS) baseados em IA"
@@ -37,7 +37,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science', 'Springer Link']`)
 > - **DOI:** [10.1007/s10566-020-09591-0](https://doi.org/10.1007/s10566-020-09591-0)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC1 (Revisao integrativa - usar no referencial teorico)]`
 
 ---
 

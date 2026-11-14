@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Frontiers in Psychiatry"
 doi: "10.3389/fpsyt.2026.1910713"
 url: "https://www.scopus.com/pages/publications/105048745161?origin=resultslist"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC1 (Revisao secundaria sem modelo empirico)]"
 qa_score: 6
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3389/fpsyt.2026.1910713](https://doi.org/10.3389/fpsyt.2026.1910713)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105048745161?origin=resultslist)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC1 (Revisao secundaria sem modelo empirico)]`
 
 ---
 

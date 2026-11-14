@@ -7,7 +7,7 @@ database: "Springer Link"
 venue: "Sleep and Biological Rhythms"
 doi: "10.1007/s41105-025-00586-9"
 url: "https://link.springer.com/article/10.1007/s41105-025-00586-9"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]"
 qa_score: 10
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Diagnósticos e Escalas Psicométricas"
@@ -42,7 +42,7 @@ tags:
 > - **Base de Origem:** `Springer Link` (Bases: `['Springer Link']`)
 > - **DOI:** [10.1007/s41105-025-00586-9](https://doi.org/10.1007/s41105-025-00586-9)
 > - **URL:** [Link da Publicação](https://link.springer.com/article/10.1007/s41105-025-00586-9)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]`
 
 ---
 

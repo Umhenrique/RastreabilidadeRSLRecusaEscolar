@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "JMIR Research Protocols"
 doi: "10.2196/37364"
 url: "https://www.scopus.com/pages/publications/85139725821?origin=resultslist"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC1 (Protocolo sem dados empiricos nem IA/ML)]"
 qa_score: 7
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.2196/37364](https://doi.org/10.2196/37364)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85139725821?origin=resultslist)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC1 (Protocolo sem dados empiricos nem IA/ML)]`
 
 ---
 

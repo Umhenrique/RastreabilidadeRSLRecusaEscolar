@@ -7,7 +7,7 @@ database: "Web of Science"
 venue: "IMPROVING SCHOOLS"
 doi: "10.1177/13654802231174986"
 url: ""
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC1 (Sintese de politicas - usar no referencial teorico)]"
 qa_score: 8
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Random Forest / Ensemble Learning"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `Web of Science` (Bases: `['Web of Science']`)
 > - **DOI:** [10.1177/13654802231174986](https://doi.org/10.1177/13654802231174986)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC1 (Sintese de politicas - usar no referencial teorico)]`
 
 ---
 

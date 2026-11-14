@@ -7,7 +7,7 @@ database: "ACM DL"
 venue: "Proceedings of the Ninth ACM Conference on Learning @ Scale"
 doi: "10.1145/3491140.3528670"
 url: "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3491140.3528670"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (WIP sem ML implementado)]"
 qa_score: 8
 population_scope: "Ensino Básico (K-12)"
 intervention_scope: "Machine Learning em Early Warning Systems"
@@ -42,7 +42,7 @@ tags:
 > - **Base de Origem:** `ACM DL` (Bases: `['ACM DL']`)
 > - **DOI:** [10.1145/3491140.3528670](https://doi.org/10.1145/3491140.3528670)
 > - **URL:** [Link da Publicação](https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3491140.3528670)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (WIP sem ML implementado)]`
 
 ---
 

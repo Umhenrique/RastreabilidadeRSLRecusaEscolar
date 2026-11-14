@@ -90,3 +90,19 @@ Cada decisao registrada contem:
 - **Decisao Tomada:** Por deliberacao explicita do pesquisador, manteve-se `S0022` (*Compulsory educational mental health support system in Japan*) no corpus ativo e reclassificaram-se formalmente **16 estudos** para exclusao na Fase 2: `S0199` por `EC3` (duplicata exata de `S0183`) e `S0203`, `S0183`, `S0001`, `S0105`, `S0113`, `S0136`, `S0152`, `S0018`, `S0033`, `S0042`, `S0053`, `S0080`, `S0202`, `S0019` e `S0214` por `EC2` (fora de escopo / ausencia de IA, ML ou escala psicometrica).
 - **Justificativa Academica:** Preservar a validade interna e a aderencia estrita ao criterio `IC1` durante a triagem de Fase 2, mantendo rastreabilidade integral no funil PRISMA 2020.
 - **Impacto no Projeto:** Corpus ativo da Fase 2 atualizado de `101` para `85` estudos (`2` extraidos integralmente: `S0012`, `S0104`; `83` pendentes; `16` excluidos na Fase 2). Atualizacao das 16 notas em `04_extracao_dados/estudos/`, `04_extracao_dados/matriz_extracao.csv` e `.xlsx`, `00_INDEX.md`, `05_memoria_projeto/estado_conhecimento_rsl.md` e repositorio GitHub.
+
+### [DEC-008] Refinamento do Criterio IC1 e Reclassificacao em Lote apos Debate Metodologico da Fase 2
+- **Data:** 13 de Novembro de 2026
+- **Status:** `[Aprovado]`
+- **Contexto:** Durante o debate metodologico sobre os 26 PDFs lidos integralmente na Fase 2 (24 extraidos + 2 ja excluidos em leitura previa: `S0133` e `S0153`), identificou-se que varios estudos aplicavam apenas escalas psicometricas ou modelos estatisticos tradicionais sem IA/ML preditivo, ou constituiam revisoes secundarias/protocolos WIP sem implementacao empirica.
+- **Decisao:** Por deliberacao explicita do pesquisador (Matheus), o criterio **IC1** em `01_protocolo/protocolo_rsl.md` foi ajustado para exigir que o estudo primario aplique efetivamente tecnicas de IA, Machine Learning ou modelagem preditiva associadas a recusa escolar ou ao absenteismo escolar com fatores socioemocionais, nao bastando a presenca isolada de escala psicometrica ou revisao teorica. Consequentemente:
+  - **19 estudos reclassificados para `[Excluido Fase 2]`:**
+    - `S0325` (`EC2` - trabalho em progresso WIP sem ML implementado);
+    - `S0283` (`EC2` - EWS administrativo focado em risco economico/saude, sem fatores socioemocionais ou IA/ML);
+    - `S0315`, `S0322`, `S0561`, `S0567`, `S0555`, `S0505`, `S0500`, `S0120`, `S0091`, `S0145`, `S0154` (`EC2` - estudos psicometricos, epidemiologicos ou de intervencao sem modelos preditivos de IA/ML; mantidos apenas como referencia teorica);
+    - `S0012`, `S0075`, `S0204`, `S0206` (`EC1` - revisoes narrativa/integrativa/sintese de politicas sem modelo empirico proprio);
+    - `S0030` (`EC1` - protocolo metodologico sem dados empiricos nem IA/ML);
+    - `S0735` (`EC2` - estudo de intervencao clinica/preventiva sem IA/ML).
+  - **1 estudo mantido com observacao `[EM DUVIDA]`:** `S0191` (chatbot especialista baseado em regras com escala SCARED, focado em ansiedade infantil tendo evitacao escolar como subescala secundaria), aguardando decisao final na proxima reuniao de triagem.
+  - **4 estudos validados como incluidos ativos:** `S0198`, `S0104`, `S0501`, `S0290` (totalizando `5` estudos no grupo ativo `[Incluido Fase 2 - Extracao Concluida]` junto a `S0191`).
+- **Impacto no Projeto:** Total de excluidos na Fase 2 elevado de `18` para `37` (`16` da DEC-007 + `2` leitura previa `S0133`/`S0153` + `19` da DEC-008); estudos ativos extraidos atualizados de `24` para `5` (`4` validados + `1` em duvida); `59` estudos seguem `[Pendente Leitura Completa]`. Atualizados `01_protocolo/protocolo_rsl.md`, notas em `04_extracao_dados/estudos/`, `matriz_extracao.csv/.xlsx`, `matriz_extracao_concluidos.csv/.xlsx`, `00_INDEX.md`, `06_sintese_relatorio/resumo_estudos_extraidos_fase2.md` e Google Docs.

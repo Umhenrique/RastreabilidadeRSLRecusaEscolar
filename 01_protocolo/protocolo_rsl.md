@@ -67,7 +67,7 @@ Na **IEEE Xplore**, a aplicação da string completa de 3 blocos resultou em **1
 ## 5. Critérios de Seleção (Critérios de Elegibilidade)
 
 ### 5.1 Critérios de Inclusão (Inclusion Criteria - IC)
-* **IC1:** Artigos originais de pesquisa revisados por pares (*peer-reviewed*), incluindo artigos de periódicos e anais de conferências científicas.
+* **IC1:** Artigos originais empiricos revisados por pares (*peer-reviewed*), publicados em periodicos ou anais de conferencias cientificas, que apresentem aplicacao concreta de modelos de Inteligencia Artificial, Machine Learning ou analise preditiva voltados a recusa escolar ou ao absenteismo escolar associado a fatores sociais e emocionais (escalas psicometricas isoladas ou revisoes sem modelo preditivo nao entram como estudos primarios da RSL, podendo compor o referencial teorico).
 * **IC2:** Estudos que abordem explicitamente o desenvolvimento, validação, aplicação ou revisão de ferramentas de diagnóstico, triagem (*screening*), avaliação ou predição voltadas à recusa escolar (*school refusal*), absenteísmo crônico ou evasão associada.
 * **IC3:** Estudos publicados nos idiomas inglês, português ou espanhol (ou traduzidos por ferramentas oficiais).
 * **IC4:** Trabalhos que apresentem dados empíricos, arquiteturas de sistemas ou revisões sistemáticas/integrativas relevantes ao escopo.

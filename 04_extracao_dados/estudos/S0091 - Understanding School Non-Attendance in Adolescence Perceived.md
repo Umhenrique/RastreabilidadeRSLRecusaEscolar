@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Education Sciences"
 doi: "10.3390/educsci16071074"
 url: "https://www.scopus.com/pages/publications/105045730024?origin=resultslist"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]"
 qa_score: 10
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -42,7 +42,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.3390/educsci16071074](https://doi.org/10.3390/educsci16071074)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105045730024?origin=resultslist)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Psicometrico/estatistico sem IA/ML preditivo - usar no referencial)]`
 
 ---
 

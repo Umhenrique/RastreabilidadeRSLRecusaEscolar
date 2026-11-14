@@ -7,7 +7,7 @@ database: "ACM DL"
 venue: "Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency"
 doi: "10.1145/3715275.3732175"
 url: "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3715275.3732175"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (EWS administrativo sem fatores socioemocionais)]"
 qa_score: 9
 population_scope: "Ensino Básico (Escolas Públicas K-12)"
 intervention_scope: "Early Warning Systems / Modelos Preditivos"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `ACM DL` (Bases: `['ACM DL']`)
 > - **DOI:** [10.1145/3715275.3732175](https://doi.org/10.1145/3715275.3732175)
 > - **URL:** [Link da Publicação](https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3715275.3732175)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (EWS administrativo sem fatores socioemocionais)]`
 
 ---
 

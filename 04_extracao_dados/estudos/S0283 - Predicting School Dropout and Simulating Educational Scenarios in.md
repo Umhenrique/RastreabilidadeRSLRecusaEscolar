@@ -7,7 +7,7 @@ database: "IEEE Xplore"
 venue: "2025 IEEE VIII Congreso Internacional en Inteligencia Ambiental, Ingenieria de Software y Salud Electronica y Movil (AmITIC)"
 doi: "10.1109/AmITIC68284.2025.11214605"
 url: ""
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (Foco socioeconomico sem fatores socioemocionais)]"
 qa_score: 6
 population_scope: "Educação Básica (Colômbia)"
 intervention_scope: "Redes Neurais, SVM, Árvores de Decisão"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `IEEE Xplore` (Bases: `['IEEE Xplore']`)
 > - **DOI:** [10.1109/AmITIC68284.2025.11214605](https://doi.org/10.1109/AmITIC68284.2025.11214605)
 > - **URL:** Não informado
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Foco socioeconomico sem fatores socioemocionais)]`
 
 ---
 

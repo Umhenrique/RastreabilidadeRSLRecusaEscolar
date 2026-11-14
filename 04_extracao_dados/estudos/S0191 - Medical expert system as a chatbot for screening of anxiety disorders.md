@@ -128,6 +128,7 @@ tags:
 ---
 
 ## 5. Anotacoes Pessoais e Insights do Pesquisador (Matheus Medeiros)
+- **[EM DUVIDA - Reuniao]:** Foca em triagem de transtornos de ansiedade (SCARED); o absenteismo/evitacao escolar aparece apenas como subescala secundaria.
 - ---
 
 ## Navegacao e Conexoes

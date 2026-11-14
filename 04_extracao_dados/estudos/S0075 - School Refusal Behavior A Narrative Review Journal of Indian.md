@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Journal of Indian Association for Child and Adolescent Mental Health"
 doi: "10.1177/09731342231220705"
 url: "https://www.scopus.com/pages/publications/85185127916?origin=resultslist"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC1 (Revisao narrativa fora do escopo)]"
 qa_score: 7
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1177/09731342231220705](https://doi.org/10.1177/09731342231220705)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85185127916?origin=resultslist)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC1 (Revisao narrativa fora do escopo)]`
 
 ---
 

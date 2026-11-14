@@ -7,7 +7,7 @@ database: "ACM DL"
 venue: "LAK21: 11th International Learning Analytics and Knowledge Conference"
 doi: "10.1145/3448139.3448190"
 url: "https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3448139.3448190"
-status: "[Incluido Fase 2 - Extracao Concluida]"
+status: "[Excluido Fase 2 - Criterio EC2 (EWS administrativo sem fatores socioemocionais)]"
 qa_score: 8
 population_scope: "Ensino Médio (High School / Ensino Básico)"
 intervention_scope: "Machine Learning em Early Warning Systems"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `ACM DL` (Bases: `['ACM DL']`)
 > - **DOI:** [10.1145/3448139.3448190](https://doi.org/10.1145/3448139.3448190)
 > - **URL:** [Link da Publicação](https://doi-org.ez13.periodicos.capes.gov.br/10.1145/3448139.3448190)
-> - **Status da Extração:** `[Incluido Fase 2 - Extracao Concluida]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (EWS administrativo sem fatores socioemocionais)]`
 
 ---
 
