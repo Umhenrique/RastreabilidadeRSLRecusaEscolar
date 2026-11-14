@@ -9,7 +9,7 @@
 | Situacao na Fase 2 | Quantidade | Observacao |
 | :--- | :---: | :--- |
 | `[Incluido Fase 2 - Extracao Concluida]` | 5 | 4 validados (`S0198`, `S0104`, `S0501`, `S0290`) + 1 `[EM DUVIDA]` (`S0191`) |
-| `[Excluido Fase 2]` | 37 | 16 (`DEC-007`) + 2 (`S0133`, `S0153`) + 19 (`DEC-008`) |
+| `[Excluido Fase 2]` | 37 | **16** na auditoria pre-extracao (`DEC-007`, antes dos PDFs) + **21** apos leitura completa dos 26 PDFs (`2` iniciais `S0133`/`S0153` + `19` `DEC-008`) |
 | `[Pendente Leitura Completa]` | 59 | Aguardando obtencao e leitura integral dos PDFs |
 
 ---
@@ -42,3 +42,26 @@ Estes estudos foram lidos integralmente no lote inicial de 26 PDFs e reclassific
 | `S0315`, `S0322` | `EC2` - Estudos psicometricos/estatisticos fora do escopo preditivo de IA/ML | N/A |
 | `S0561`, `S0567`, `S0555`, `S0505`, `S0500`, `S0120`, `S0091`, `S0145`, `S0154` | `EC2` - Estudos psicometricos, epidemiologicos ou estatisticos sem modelos preditivos de IA/ML | Referencial teorico (escalas e construtos, ex.: `S0505` sobre EBSA) |
 | `S0735` | `EC2` - Estudo de intervencao clinica/preventiva sem IA/ML | N/A |
+
+---
+
+## 4. Declaracao dos Demais Estudos Excluidos na Fase 2 (18 Estudos Previos)
+
+Para rastreabilidade completa dos **37** excluidos na Fase 2 (`19` da `DEC-008` + `18` previos = `37`), registram-se abaixo os **2** estudos excluidos apos leitura integral inicial e os **16** estudos barrados na auditoria pre-extracao (`DEC-007`) antes da obtencao dos PDFs:
+
+### 4.1 Excluidos na Leitura Integral Inicial (2 Estudos)
+
+| Study ID | Motivo da Exclusao (EC2) | Etapa |
+| :--- | :--- | :--- |
+| `S0133` | `EC2` - Dataset de Ensino Superior (UCI), fora da populacao-alvo (educacao basica) | Leitura integral previa |
+| `S0153` | `EC2` - Nao mensura desfecho de absenteismo ou recusa escolar | Leitura integral previa |
+
+### 4.2 Excluidos na Auditoria Pre-Extracao (`DEC-007`, 16 Estudos)
+
+Estes 16 estudos passaram inicialmente na triagem da Fase 1, mas foram excluidos na auditoria de elegibilidade na entrada da Fase 2 (antes da leitura dos PDFs):
+
+| Study ID | Motivo da Exclusao (`DEC-007`) | Etapa |
+| :--- | :--- | :--- |
+| `S0199` | `EC3` - Duplicata tardia de `S0183` | Auditoria pre-extracao (`DEC-007`) |
+| `S0203` | `EC2` - Fora de escopo (relato de caso clinico) | Auditoria pre-extracao (`DEC-007`) |
+| `S0001`, `S0018`, `S0019`, `S0033`, `S0042`, `S0053`, `S0080`, `S0105`, `S0113`, `S0136`, `S0152`, `S0183`, `S0202`, `S0214` | `EC2` - Fora de escopo (sem aplicacao de IA/ML ou escala psicometrica) | Auditoria pre-extracao (`DEC-007`) |
