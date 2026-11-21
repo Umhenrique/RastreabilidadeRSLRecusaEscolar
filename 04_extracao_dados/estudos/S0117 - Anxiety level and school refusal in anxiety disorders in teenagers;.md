@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Neuropsychiatrie de l'Enfance et de l'Adolescence"
 doi: "10.1016/j.neurenf.2023.05.008"
 url: "https://www.scopus.com/pages/publications/85164304726?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1016/j.neurenf.2023.05.008](https://doi.org/10.1016/j.neurenf.2023.05.008)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85164304726?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

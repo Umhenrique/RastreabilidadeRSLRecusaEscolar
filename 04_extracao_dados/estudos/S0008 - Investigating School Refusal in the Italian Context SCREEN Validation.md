@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Psychology in the Schools"
 doi: "10.1002/pits.70164"
 url: "https://www.scopus.com/pages/publications/105035839697?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Modelagem Analítico-Preditiva / Network Analysis"
@@ -39,7 +39,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1002/pits.70164](https://doi.org/10.1002/pits.70164)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105035839697?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

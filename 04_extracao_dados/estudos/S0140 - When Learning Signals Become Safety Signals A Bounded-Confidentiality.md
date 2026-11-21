@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Proceedings of Machine Learning Research"
 doi: ""
 url: "https://www.scopus.com/pages/publications/105048703236?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** Não informado
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105048703236?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Indian Journal of Pediatrics"
 doi: "10.1007/s12098-018-2787-9"
 url: "https://www.scopus.com/pages/publications/85053454981?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Instrumentos Diagnósticos e Escalas Psicométricas"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1007/s12098-018-2787-9](https://doi.org/10.1007/s12098-018-2787-9)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85053454981?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Proceedings - 18th IEEE International Conference on Machine Learning and Applications, ICMLA 2019"
 doi: "10.1109/ICMLA.2019.00085"
 url: "https://www.scopus.com/pages/publications/85080965065?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Médio)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'IEEE Xplore']`)
 > - **DOI:** [10.1109/ICMLA.2019.00085](https://doi.org/10.1109/ICMLA.2019.00085)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85080965065?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

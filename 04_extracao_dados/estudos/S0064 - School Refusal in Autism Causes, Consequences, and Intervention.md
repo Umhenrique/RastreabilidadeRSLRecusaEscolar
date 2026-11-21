@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Autism and Child Psychopathology Series"
 doi: "10.1007/978-3-032-07009-8_4"
 url: "https://www.scopus.com/pages/publications/105033370930?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Fundamental Inicial)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -37,7 +37,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1007/978-3-032-07009-8_4](https://doi.org/10.1007/978-3-032-07009-8_4)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105033370930?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

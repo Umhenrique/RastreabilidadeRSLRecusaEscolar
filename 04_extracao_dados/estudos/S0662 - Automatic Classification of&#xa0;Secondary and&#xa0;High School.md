@@ -7,7 +7,7 @@ database: "Springer Link"
 venue: "Advances in Artificial Intelligence – IBERAMIA 2024"
 doi: "10.1007/978-3-031-80366-6_22"
 url: "https://link.springer.com/chapter/10.1007/978-3-031-80366-6_22"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (Ensino Médio)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -36,7 +36,7 @@ tags:
 > - **Base de Origem:** `Springer Link` (Bases: `['Springer Link']`)
 > - **DOI:** [10.1007/978-3-031-80366-6_22](https://doi.org/10.1007/978-3-031-80366-6_22)
 > - **URL:** [Link da Publicação](https://link.springer.com/chapter/10.1007/978-3-031-80366-6_22)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Springer Link"
 venue: "17th International Conference on Information Technology–New Generations (ITNG 2020)"
 doi: "10.1007/978-3-030-43020-7_28"
 url: "https://link.springer.com/chapter/10.1007/978-3-030-43020-7_28"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -36,7 +36,7 @@ tags:
 > - **Base de Origem:** `Springer Link` (Bases: `['Springer Link']`)
 > - **DOI:** [10.1007/978-3-030-43020-7_28](https://doi.org/10.1007/978-3-030-43020-7_28)
 > - **URL:** [Link da Publicação](https://link.springer.com/chapter/10.1007/978-3-030-43020-7_28)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

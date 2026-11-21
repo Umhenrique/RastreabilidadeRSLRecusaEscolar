@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Behavior Modification"
 doi: "10.1177/01454455900143007"
 url: "https://www.scopus.com/pages/publications/0025005520?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Escala SRAS / SRAS-R para Recusa Escolar"
@@ -41,7 +41,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1177/01454455900143007](https://doi.org/10.1177/01454455900143007)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/0025005520?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

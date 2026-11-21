@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Japanese Psychological Research"
 doi: "10.1111/jpr.12480"
 url: "https://www.scopus.com/pages/publications/85170576193?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Modelagem Analítico-Preditiva / Network Analysis"
@@ -38,7 +38,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1111/jpr.12480](https://doi.org/10.1111/jpr.12480)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85170576193?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

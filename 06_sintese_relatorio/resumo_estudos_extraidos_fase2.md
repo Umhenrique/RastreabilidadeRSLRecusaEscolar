@@ -1,7 +1,7 @@
 # RSL Recusa Escolar e IA - Sintese Atualizada (DEC-008)
 
 **Pesquisador:** Matheus Henrique Assuncao de Medeiros (PGCC UERN/UFERSA)  
-**Data da Atualizacao:** 13 de Novembro de 2026  
+**Data da Atualizacao:** 20 de Novembro de 2026  
 **Criterio IC1 Atualizado:** Artigos empiricos revisados por pares que apliquem tecnicas de IA, Machine Learning ou modelagem preditiva associadas a recusa escolar ou ao absenteismo escolar com fatores socioemocionais (escalas psicometricas isoladas e revisoes secundarias sem modelo preditivo nao entram como estudos primarios).
 
 ## 1. Estado Consolidado da Fase 2 (101 Elegiveis)
@@ -9,8 +9,8 @@
 | Situacao na Fase 2 | Quantidade | Observacao |
 | :--- | :---: | :--- |
 | `[Incluido Fase 2 - Extracao Concluida]` | 5 | 4 validados (`S0198`, `S0104`, `S0501`, `S0290`) + 1 `[EM DUVIDA]` (`S0191`) |
-| `[Excluido Fase 2]` | 37 | Consolidados como excluidos na Fase 2 (leitura completa / elegibilidade) |
-| `[Pendente Leitura Completa]` | 59 | Aguardando obtencao e leitura integral dos PDFs |
+| `[Excluido Fase 2]` | 69 | **56** por criterios (`EC1`/`EC2`/`EC3`) + **13** sem acesso ao texto completo |
+| `[Pendente Leitura Completa]` | 27 | PDFs baixados pelo pesquisador em envio para `04_extracao_dados/pdfs/` |
 
 ---
 
@@ -26,11 +26,11 @@
 
 ---
 
-## 3. Resumo dos 37 Estudos Excluidos na Fase 2 (Leitura Completa / Elegibilidade)
+## 3. Resumo dos 69 Estudos Excluidos na Fase 2 (Elegibilidade / Acesso / Leitura Completa)
 
-Todos os 37 estudos excluidos na Fase 2 foram consolidados nesta tabela unica (`[Excluido Fase 2]`):
+Todos os 69 estudos excluidos na Fase 2 foram consolidados nesta tabela unica (`[Excluido Fase 2]`):
 
-| Study ID | Motivo da Exclusao (EC1 / EC2 / EC3) | Da para aproveitar |
+| Study ID | Motivo da Exclusao (EC1 / EC2 / EC3 / Sem Acesso) | Da para aproveitar |
 | :--- | :--- | :--- |
 | `S0325` | `EC2` - Trabalho em progresso (WIP) sem modelo de ML implementado | N/A |
 | `S0283` | `EC2` - EWS administrativo focado em risco economico/saude, sem fatores socioemocionais ou IA/ML | N/A |
@@ -47,3 +47,5 @@ Todos os 37 estudos excluidos na Fase 2 foram consolidados nesta tabela unica (`
 | `S0001`, `S0018`, `S0019`, `S0033`, `S0042`, `S0053`, `S0080`, `S0105`, `S0113`, `S0136`, `S0152`, `S0183`, `S0202`, `S0214` | `EC2` - Fora de escopo (sem aplicacao de IA/ML ou escala psicometrica) | N/A |
 | `S0133` | `EC2` - Dataset de Ensino Superior (UCI), fora da populacao-alvo (educacao basica) | N/A |
 | `S0153` | `EC2` - Nao mensura desfecho de absenteismo ou recusa escolar | N/A |
+| `S0502`, `S0548`, `S0662`, `S0822`, `S1064`, `S1260`, `S0008`, `S0021`, `S0022`, `S0037`, `S0060`, `S0065`, `S0077` | `Sem Acesso` - Texto completo indisponivel / sem acesso institucional (13 estudos) | N/A |
+| `S0064`, `S0067`, `S0082`, `S0093`, `S0108`, `S0117`, `S0127`, `S0135`, `S0137`, `S0139`, `S0140`, `S0143`, `S0156`, `S0160`, `S0162`, `S0163`, `S0168`, `S0184`, `S0194` | `EC2` - Fora de escopo na verificacao de elegibilidade para obtencao dos PDFs (19 estudos) | N/A |

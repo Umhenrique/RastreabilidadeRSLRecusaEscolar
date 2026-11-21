@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Scientific Reports"
 doi: "10.1038/s41598-024-51230-4"
 url: "https://www.scopus.com/pages/publications/85182868756?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]"
 qa_score: 0
 population_scope: "Educação Básica (Adolescentes)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -39,7 +39,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science', 'Springer Link']`)
 > - **DOI:** [10.1038/s41598-024-51230-4](https://doi.org/10.1038/s41598-024-51230-4)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/85182868756?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Criterio EC2 (Fora de Escopo)]`
 
 ---
 

@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Education Economics"
 doi: "10.1080/09645292.2026.2731046"
 url: "https://www.scopus.com/pages/publications/105050404775?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -40,7 +40,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus', 'Web of Science']`)
 > - **DOI:** [10.1080/09645292.2026.2731046](https://doi.org/10.1080/09645292.2026.2731046)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/105050404775?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

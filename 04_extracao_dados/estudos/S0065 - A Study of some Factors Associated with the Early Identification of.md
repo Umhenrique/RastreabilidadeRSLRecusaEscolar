@@ -7,7 +7,7 @@ database: "Scopus"
 venue: "Educational Review"
 doi: "10.1080/0013191790310305"
 url: "https://www.scopus.com/pages/publications/0039240705?origin=resultslist"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (Crianças)"
 intervention_scope: "Instrumentos Psicométricos combinados com Modelos Preditivos"
@@ -37,7 +37,7 @@ tags:
 > - **Base de Origem:** `Scopus` (Bases: `['Scopus']`)
 > - **DOI:** [10.1080/0013191790310305](https://doi.org/10.1080/0013191790310305)
 > - **URL:** [Link da Publicação](https://www.scopus.com/pages/publications/0039240705?origin=resultslist)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

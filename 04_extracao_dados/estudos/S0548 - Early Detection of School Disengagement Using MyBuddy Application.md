@@ -7,7 +7,7 @@ database: "Springer Link"
 venue: "Computing and Informatics"
 doi: "10.1007/978-981-99-9592-9_17"
 url: "https://link.springer.com/chapter/10.1007/978-981-99-9592-9_17"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (K-12)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -36,7 +36,7 @@ tags:
 > - **Base de Origem:** `Springer Link` (Bases: `['Springer Link']`)
 > - **DOI:** [10.1007/978-981-99-9592-9_17](https://doi.org/10.1007/978-981-99-9592-9_17)
 > - **URL:** [Link da Publicação](https://link.springer.com/chapter/10.1007/978-981-99-9592-9_17)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 

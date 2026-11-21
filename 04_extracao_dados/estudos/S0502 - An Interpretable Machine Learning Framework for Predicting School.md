@@ -7,7 +7,7 @@ database: "Springer Link"
 venue: "Innovations in Data Analytics"
 doi: "10.1007/978-3-032-27711-4_36"
 url: "https://link.springer.com/chapter/10.1007/978-3-032-27711-4_36"
-status: "[Pendente Leitura Completa]"
+status: "[Excluido Fase 2 - Sem Acesso ao Texto Completo]"
 qa_score: 0
 population_scope: "Educação Básica (Jovens/Youth)"
 intervention_scope: "Modelos de Machine Learning / IA e Análise Preditiva"
@@ -36,7 +36,7 @@ tags:
 > - **Base de Origem:** `Springer Link` (Bases: `['Springer Link']`)
 > - **DOI:** [10.1007/978-3-032-27711-4_36](https://doi.org/10.1007/978-3-032-27711-4_36)
 > - **URL:** [Link da Publicação](https://link.springer.com/chapter/10.1007/978-3-032-27711-4_36)
-> - **Status da Extração:** `[Pendente Leitura Completa]`
+> - **Status da Extração:** `[Excluido Fase 2 - Sem Acesso ao Texto Completo]`
 
 ---
 
