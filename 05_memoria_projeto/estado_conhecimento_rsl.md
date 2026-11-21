@@ -5,7 +5,7 @@
 **Programa:** PGCC UERN / UFERSA  
 **Responsavel:** Especialista 4 (Gestao de Memoria)  
 **Data da Ultima Atualizacao:** 20 de Novembro de 2026  
-**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada: 101 Elegiveis) | `[Em Andamento]` Fase 2 (5 Extraidos Ativos [4 Validados + 1 Em Duvida], 27 Pendentes de Leitura dos PDFs Baixados, 69 Excluidos na Fase 2)  
+**Status Global:** `[Concluido]` Fase 1 (Triagem Auditada: 101 Elegiveis) | `[Concluido]` Fase 2 (8 Ativos [7 Validados + 1 Em Duvida], 93 Excluidos, 0 Pendentes)  
 
 ---
 
@@ -48,9 +48,10 @@
    Excluidos apos leitura integral do PDF (lote inicial): N = 2 (S0133 [Ensino Superior UCI]; S0153 [sem desfecho de absenteismo/recusa])
    Excluidos apos debate metodologico e ajuste de IC1 (DEC-008): N = 19 (estudos sem IA/ML preditivo, revisoes secundarias, protocolo ou WIP)
    Excluidos na verificacao de acesso e escopo (lote dos 59 pendentes): N = 32 (13 sem acesso ao texto completo; 19 fora de escopo EC2)
-   Total de excluidos na Fase 2: N = 69
-   Estudos extraidos ativos (DEC-008): N = 5 (4 validados: S0198, S0104, S0501, S0290; 1 em duvida: S0191)
-   Estudos pendentes de leitura completa (PDFs em envio): N = 27
+   Excluidos apos leitura integral dos 27 PDFs finais (DEC-009): N = 24 (EC1/EC2)
+   Total de excluidos na Fase 2: N = 93 (80 por criterios EC1/EC2/EC3 + 13 sem acesso)
+   Estudos extraidos ativos finais (DEC-009): N = 8 (7 validados: S0198, S0104, S0501, S0290, S0197, S0249, S0491; 1 em duvida: S0191)
+   Estudos pendentes de leitura completa: N = 0
 ```
 
 ---

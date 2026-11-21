@@ -101,6 +101,12 @@ tags:
 - **Limitacoes Declaradas:** 
 - **Direcoes Futuras:** 
 
+### 3.1 Aprofundamento Metodologico (Diretriz do Orientador)
+- **Dados de entrada para identificar ansiedade/sofrimento:** (Formato, itens/escala, fonte de relato e periodicidade)
+- **Inventario completo de variaveis e justificativa de escolha:** (Todas as variaveis utilizadas e por que cada uma foi escolhida)
+- **Fundamentacao teorica do identificador:** (Teoria psicologica, clinica ou educacional que sustenta o modelo/instrumento)
+- **Restricoes de recursos e limitacoes do trabalho:** (Dependencias de infraestrutura, custo, equipe e aplicabilidade em escolas com restricao de recursos)
+
 ---
 
 ## 4. Avaliacao de Qualidade Metodologica (QA)

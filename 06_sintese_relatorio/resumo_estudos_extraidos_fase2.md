@@ -1,51 +1,72 @@
-# RSL Recusa Escolar e IA - Sintese Atualizada (DEC-008)
+# RSL Recusa Escolar e IA - Sintese Consolidada (DEC-009)
 
 **Pesquisador:** Matheus Henrique Assuncao de Medeiros (PGCC UERN/UFERSA)  
 **Data da Atualizacao:** 20 de Novembro de 2026  
 **Criterio IC1 Atualizado:** Artigos empiricos revisados por pares que apliquem tecnicas de IA, Machine Learning ou modelagem preditiva associadas a recusa escolar ou ao absenteismo escolar com fatores socioemocionais (escalas psicometricas isoladas e revisoes secundarias sem modelo preditivo nao entram como estudos primarios).
 
-## 1. Estado Consolidado da Fase 2 (101 Elegiveis)
+## 1. Estado Consolidado da Fase 2 (101 Elegiveis — 100% Concluida)
 
 | Situacao na Fase 2 | Quantidade | Observacao |
 | :--- | :---: | :--- |
-| `[Incluido Fase 2 - Extracao Concluida]` | 5 | 4 validados (`S0198`, `S0104`, `S0501`, `S0290`) + 1 `[EM DUVIDA]` (`S0191`) |
-| `[Excluido Fase 2]` | 69 | **56** por criterios (`EC1`/`EC2`/`EC3`) + **13** sem acesso ao texto completo |
-| `[Pendente Leitura Completa]` | 27 | PDFs baixados pelo pesquisador em envio para `04_extracao_dados/pdfs/` |
+| `[Incluido Fase 2 - Extracao Concluida]` | 8 | 7 validados (`S0198`, `S0104`, `S0501`, `S0290`, `S0197`, `S0249`, `S0491`) + 1 `[EM DUVIDA]` (`S0191`) |
+| `[Excluido Fase 2]` | 93 | 80 por criterios (`EC1`/`EC2`/`EC3`) + 13 sem acesso ao texto completo |
+| `[Pendente Leitura Completa]` | 0 | Fase 2 integralmente concluida |
 
 ---
 
-## 2. Tabela Comparativa dos Estudos Ativos (5 Estudos)
+## 2. Tabela Comparativa dos Estudos Ativos (8 Estudos)
 
 | ID | Titulo resumido + nome | Algoritmo + tecnicas | Amostra | Fatores socioemocionais | Resultados | OBS |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `S0198` | ML para Classificacao de Padroes de Absenteismo em Jovens com TDAH (Goh et al., 2026) | Random Forest (1.000 arvores; 5x5-fold CV; split 67/33) + checklist biopsicossocioeducacional (80 itens) | N = 194 jovens com TDAH (4-17 anos, Canada) | Sintomas internalizantes e externalizantes, sono, clima familiar e funcionamento escolar | AUC = 0,75 (CV) e 0,79 (teste); Acuracia = 0,73; Sensibilidade = 0,80 (limiar 0,42) | `[INCLUIDO]` Dentro do tema: une ML + fatores socioemocionais + absenteismo escolar |
+| `S0198` | ML para Classificacao de Padroes de Absenteismo em Jovens com TDAH (Goh et al., 2026) | Random Forest (1.000 arvores; 5x5-fold CV; split 67/33) + checklist institucional binario (68 itens + 12 diagnosticos) | N = 194 jovens com TDAH (4-17 anos, Canada) | Humor ansioso/depressivo, diagnosticos de ansiedade/depressao/TEPT, isolamento social, vitimizacao e dinamicas familiares | AUC = 0,75 (CV) e 0,79 (teste); Acuracia = 0,73; Sensibilidade = 0,80 (limiar 0,42) | `[INCLUIDO]` Dentro do tema: une ML + fatores socioemocionais + absenteismo escolar |
 | `S0104` | Deteccao Precoce de Saude Mental via Observacao Diaria Digitalizada no Japao (Nishimura et al., 2024) | Group-Based Trajectory Modeling (ZIP) + Rolling Z-Score (7 dias) + Regressao Binomial Negativa Multinivel + PHQ-4 + JaSC | N = 2.143 alunos (1o ao 9o ano, 76 dias letivos, 5 escolas, Japao) | Emocoes diarias (*Zones of Regulation*), dor/sono, depressao e ansiedade (PHQ-4) e clima escolar (JaSC) | Grupo cronico (5,4%): IRR = 5,17 para depressao/ansiedade e IRR = 2,14 para dias de falta | `[INCLUIDO]` Promissor e explicavel (enquadrado em *Futoukou*, mas registra total de faltas sem separar doenca vs. recusa) |
 | `S0501` | ML Interpretavel para Predicao de Absenteismo Escolar em Larga Escala no Brasil (Barros et al., 2026) | Random Forest, CatBoost, XGBoost, LightGBM e Regressao Logistica + XAI (SHAP e contrafactuais *what-if*) | N = 22.476 escolas de Ensino Medio (Brasil; SGP + Censo Escolar + ICG 2024) | Nao possui variaveis socioemocionais individuais (apenas infraestrutura, docentes, equipe pedagogica e regiao) | Acuracia = 0,67-0,85; F1 = 0,58-0,81; Recall = 0,43-0,89 | `[INCLUIDO]` Referencia brasileira em larga escala; evidencia lacuna de variaveis de saude mental no SGP/INEP |
-| `S0290` | Ensemble Learning Explicavel para Predicao de Evasao em Contexto de Conflito (Abas et al., 2026) | XGBoost e Random Forest + SMOTE + LASSO + XAI (LIME) + questionario de 34 itens | N = 1.158 estudantes (5 escolas, Sabha, Libia) | Coesao familiar, ambiente escolar, motivacao e *Stress and Anxiety Index* (SAI) | XGBoost Acc/F1 = 0,941 (CV F1 = 0,939); Random Forest Acc/F1 = 0,939 | `[INCLUIDO]` Alvo binario sintetico/heuristico e focado na transicao para o ensino superior (*higher-education non-enrollment*) |
+| `S0290` | Ensemble Learning Explicavel para Predicao de Evasao em Contexto de Conflito (Abas et al., 2026) | XGBoost e Random Forest + SMOTE + LASSO + XAI (LIME) + questionario de 34 itens | N = 1.158 estudantes (5 escolas, Sabha, Libia) | Coesao familiar, ambiente escolar, motivacao e *Stress and Anxiety Index* (SAI) | XGBoost Acc/F1 = 0,941 (CV F1 = 0,939); Random Forest Acc/F1 = 0,939 | `[INCLUIDO]` Alvo binario sintetico/heuristico e focado na transicao para o ensino superior |
+| `S0197` | ML para Revelar Fatores Subjacentes ao Absenteismo Escolar (EUA, 2022) | K-Means Clustering (K=3/turma) + Gaussian Naive Bayes + KNN (K=5) sobre registros diarios gamificados SEL | N = 332 alunos K-6 (15 turmas, 26.741 registros comportamentais, Indiana, EUA) | 10 *Core Values* SEL (entusiasmo, foco, responsabilidade, comunicacao respeitosa, relacionamento positivo com pares, respeito) | Gaussian Naive Bayes atingiu **90,2% de acuracia**; revelou relacionamento com pares como fator central diferenciador | `[INCLUIDO - DEC-009]` ML aplicado a dados socioemocionais diarios para estratificar risco de absenteismo |
+| `S0249` | Analytics Orientado a Dados e Teoria Ecologica no Absenteismo Secundario (EUA, 2023) | Imputacao CART/MICE + SMOTE + Filter/J48 Wrapper + J48 Decision Tree (C4.5) + Regressao Logistica (10-fold CV) | N = 121.005 estudantes secundarios (8a, 9a e 11a series, Minnesota, EUA) | PHQ-2 (depressao), tratamento em saude mental, ideacao/tentativa suicida, autolesao, *Social Competency Scale*, *School Engagement*, relacao professor-aluno e ACEs | Subconjunto enxuto de **18 variaveis** (de 113): J48+SMOTE obteve **Acc = 92,80%, F1 = 0,93 e AUC = 0,957** | `[INCLUIDO - DEC-009]` Forte evidencia para conjunto minimo de variaveis (18 de 113) com alto desempenho preditivo |
+| `S0491` | Perfis Latentes e Analise de Redes em Problemas de Frequencia Escolar (Cimen et al., 2025/2026) | Latent Profile Analysis (LPA, Mplus 8.8) + metodo BCH + *Network Analysis* (`EI`, `BEI`, previsibilidade $R^2$) | N = 1.611 adolescentes (12-18 anos, Turquia) | Depressao, ansiedade e estresse (DASS-21) + sintomas somaticos, queixas subjetivas e recusa escolar (ARSNA) | 4 perfis (Entropia = 0,861); na rede, **Estresse** foi o no mais central (`EI = 0,814; R2 = 0,653`) e Evasao o maior no-ponte (`BEI = 0,365`) | `[INCLUIDO - DEC-009]` Aprovado por apoiar diretamente a identificacao de variaveis minimas centrais |
 | `S0191` | Chatbot Especialista para Triagem de Transtornos de Ansiedade Infantil (Madasu & Hajiarbabi, 2026) | Sistema Especialista Baseado em Regras (*Forward Chaining*, BPMN convertido em AIML) + escala SCARED (41 itens) | N = 100 participantes (70 pais e 30 profissionais de saude, EUA) | Ansiedade generalizada, panico, ansiedade de separacao, fobia social e evitacao escolar (subescala SCARED) | Concordancia clinica: 92% (ansiedade generalizada) e 89% (panico); 90% de satisfacao | `[EM DUVIDA]` Foca em triagem de ansiedade infantil, tendo evitacao escolar apenas como subescala secundaria |
 
 ---
 
-## 3. Resumo dos 69 Estudos Excluidos na Fase 2 (Elegibilidade / Acesso / Leitura Completa)
+## 3. Aprofundamento Metodologico (Diretrizes do Orientador)
 
-Todos os 69 estudos excluidos na Fase 2 foram consolidados nesta tabela unica (`[Excluido Fase 2]`):
+| ID | Dados de Entrada para Ansiedade / Sofrimento | Variaveis e Justificativa de Escolha | Fundamentacao Teorica dos Identificadores | Restricoes de Recursos e Limitacoes |
+| :--- | :--- | :--- | :--- | :--- |
+| `S0198` | Checklist institucional binario (`yes`/`no`) respondido por pais/cuidadores na admissao (2 itens de humor ansioso/depressivo + diagnosticos previos), sem escala continua | 68 itens em 8 dominios clinico-funcionais + 12 diagnosticos + idade/genero; escolhidos por coleta breve na rotina clinica e alinhamento a meta-analise de Gubbels et al. (2019) | Etiologia multifatorial do absenteismo (Gubbels et al., 2019; Kearney, 2008), psicopatologia do TDAH e predicao atuarial via Random Forest (Breiman, 2001) | Coleta em clinica comunitaria com assistente de caso; amostra pequena (N=194, 77,3% meninos), relato parental unico sem confirmacao clinica nem clima escolar |
+| `S0104` | Observacao diaria digital em tablet (8 itens somaticos/sono + *Zones of Regulation* 4 zonas) + PHQ-4 mensal (4 itens Likert) + JaSC unico (32 itens) + faltas diarias | 8 itens diarios + indices de trajetoria/anomalia (*rolling z-score* > +1) + PHQ-4 + JaSC + covariaveis; escolhidos pela viabilidade infantil de queixas somaticas e deteccao aguda dia a dia | *School Health and Safety Act* (Japao), *Zones of Regulation* (Kuypers, 2013), ESM, GBTM (ZIP) e transparencia algoritmica (*rolling z-score*) | Depende de 1 tablet por aluno (programa GIGA School) e rede estavel; nao captura dados nos dias de falta (290 excluidos) nem separa doenca de *Futoukou* |
+| `S0501` | Nao coleta dados individuais ou escalas de ansiedade/sofrimento (apenas dados agregados estatais por escola: SGP, Censo Escolar e ICG 2024) | ~350 atributos reduzidos a 294 e ~35 por ICG (infraestrutura, docentes, equipe pedagogica, localizacao); escolhidos por disponibilidade nacional e estratificacao ICG | Faixas de absenteismo de Kearney (2021), ICG/INEP, *Learning Analytics* / EWS e XAI (SHAP + contrafactuais *what-if*) | Exige integracao MEC/INEP sob LGPD; granularidade por escola omite fatores pessoais, familiares e socioemocionais individuais; baixo recall no ICG 6 (0,43) |
+| `S0290` | Questionario estruturado de 34 itens de autorrelato do aluno (`Study Anxiety`, `Health Status`, `Dropout Reason` e indice composto $SAI$) sem escala clinica padrao | 34 atributos em 6 dominios + 4 indices compostos (PES, SCI, RAS, SAI), filtrados via Chi2/MI/RFE/LASSO para suprir falta de registros nacionais em zona de conflito | *Educational Data Mining* e heuristicas educacionais de indicadores protetivos vs. de risco para perfilamento na transicao ao ensino superior | Concebido para baixa infraestrutura (questionario impresso + ML tabular), mas usa alvo binario sintetico sem *ground truth* real nem validacao longitudinal |
+| `S0197` | Registros comportamentais diarios dos professores em plataforma gamificada sobre 10 *Core Values* SEL (sem escala clinica direta de ansiedade) | 5 indicadores gamificados de 10 *Core Values* SEL + frequencia escolar; escolhidos para capturar comportamento socioemocional continuo em sala de aula | Aprendizagem Socioemocional (SEL), gamificacao comportamental (*Building Dreams*) e agrupamento/classificacao via K-Means + Naive Bayes | Depende de licenca proprietaria (*Building Dreams*), infraestrutura digital em sala e alta carga docente (4,2 registros/aluno/dia) com risco de vies entre turmas |
+| `S0249` | Autorrelato estadual (MSS 2016): PHQ-2 (2 itens depressao), tratamento em saude mental, ideacao/tentativa suicida e autolesao (sem escala especifica de ansiedade) | 113 variaveis ecologicas reduzidas por Filter+Wrapper a 18 variaveis de micro e mesossistema (SCS, SE, TSR, ACEs, depressao); escolhidas pela teoria ecologica KiTeS | Modelo ecologico KiTeS (*Kids and Teens at School*; Melvin et al., 2019), teoria bioecologica de Bronfenbrenner e arvores de decisao interpretaveis (J48) | Modelo final parcimonioso (18 itens), mas pipeline populacional exigiu 32 GB RAM/GPU e depende de survey estadual trienal sem registros administrativos escolares |
+| `S0491` | Escala DASS-21 (21 itens Likert 0-3 para depressao, ansiedade e estresse) + ARSNA (razoes de absenteismo/recusa escolar) aplicadas online aos estudantes | 21 itens DASS-21 + dimensoes da ARSNA + evasao; escolhidos para mapear sintomas internalizantes centrais e nos-ponte ligados a problemas de frequencia | Abordagem dimensional de problemas de frequencia (Kearney, ARSNA), modelo tripartido DASS-21 e *Network Theory of Mental Disorders* (Borsboom) | Exigiu smartphone/tablet proprio e internet do aluno (vies socioeconomico), consentimento parental e Mplus 8.8; corte transversal impede predicao temporal |
+| `S0191` | 41 itens do SCARED (Likert 0-2) em chatbot web AIML, somados em 5 subescalas (panico, TAG, separacao, fobia social e evitacao escolar >= 3) | Exclusivamente os 41 itens do SCARED e 5 somas de subescala (sem faltas ou notas escolares); escolhidos pela padronizacao psicometrica infantil | Escala SCARED (Birmaher et al., 1997), prevencao precoce em saude mental e Sistemas Especialistas Baseados em Regras (*Forward Chaining* / BPMN -> AIML) | Leve (web/XML sem GPU), mas exige navegador, internet e literacia digital; triagem preliminar sem validacao contra diagnostico padrao-ouro (N=100) |
 
-| Study ID | Motivo da Exclusao (EC1 / EC2 / EC3 / Sem Acesso) | Da para aproveitar |
+---
+
+## 4. Agenda de Pesquisa (Diretriz do Orientador)
+
+Com base nos achados da RSL e nas orientacoes da reuniao, consolidam-se dois eixos estrategicos para a discussao do manuscrito e trabalhos futuros da dissertacao:
+
+1. **Questao de Pesquisa Futura (Conjunto Minimo de Variaveis):** *"Que conjunto minimo de variaveis possiveis podemos usar para a identificacao da recusa escolar em ambientes com restricao de recursos?"* — Os estudos `S0249` (reducao de 113 para 18 variaveis com AUC = 0,957), `S0104` (8 itens diarios simples) e `S0491` (identificacao de Estresse como no central na rede) fornecem evidencias iniciais para investigar modelos enxutos e de baixo custo de coleta.
+2. **Linha Tecnologica (Small LLMs):** Avaliar o uso de **Small LLMs** (modelos de linguagem compactos e executaveis localmente com baixo custo computacional e maior preservacao de privacidade/LGPD) para apoiar a triagem, estruturacao de relatos curtos de professores/responsaveis e identificacao precoce de sinais de recusa escolar em escolas com restricao de infraestrutura e equipe clinica.
+
+---
+
+## 5. Resumo Consolidado dos 93 Estudos Excluidos na Fase 2
+
+| Study ID | Motivo da Exclusao (`EC1` / `EC2` / `EC3` / `Sem Acesso`) | Da para aproveitar |
 | :--- | :--- | :--- |
 | `S0325` | `EC2` - Trabalho em progresso (WIP) sem modelo de ML implementado | N/A |
 | `S0283` | `EC2` - EWS administrativo focado em risco economico/saude, sem fatores socioemocionais ou IA/ML | N/A |
-| `S0012` | `EC1` - Mini revisao narrativa (nao e estudo primario empirico) | Referencial teorico / introducao |
-| `S0075` | `EC1` - Revisao narrativa clinica (nao e estudo primario com IA/ML) | Referencial teorico / definicoes |
-| `S0204` | `EC1` - Revisao integrativa (nao e estudo primario com IA/ML) | Referencial teorico / sintese |
-| `S0206` | `EC1` - Sintese de politicas / framework conceitual (sem IA/ML empirico) | Referencial teorico / contexto |
-| `S0030` | `EC1` - Protocolo metodologico sem dados empiricos nem IA/ML | N/A |
-| `S0315`, `S0322` | `EC2` - Estudos psicometricos/estatisticos fora do escopo preditivo de IA/ML | N/A |
-| `S0561`, `S0567`, `S0555`, `S0505`, `S0500`, `S0120`, `S0091`, `S0145`, `S0154` | `EC2` - Estudos psicometricos, epidemiologicos ou estatisticos sem modelos preditivos de IA/ML | Referencial teorico (escalas e construtos, ex.: `S0505` sobre EBSA) |
-| `S0735` | `EC2` - Estudo de intervencao clinica/preventiva sem IA/ML | N/A |
+| `S0012`, `S0013`, `S0075`, `S0201`, `S0204`, `S0206`, `S0210` | `EC1` - Revisoes secundarias (narrativa, integrativa, sistematica, sintese de politicas/framework) sem modelo empirico proprio de IA/ML | Referencial teorico / introducao / definicoes |
+| `S0030`, `S0294` | `EC1` - Protocolo metodologico / resumo de poster 1 pagina sem dados empiricos nem IA/ML | N/A |
+| `S0315`, `S0322`, `S0735`, `S0025`, `S0034`, `S0055`, `S0069`, `S0070`, `S0748`, `S0911`, `S1235` | `EC2` - Estudos psicometricos (CFA/MGCFA/PCA), clinicos descritivos ou de intervencao sem modelo preditivo de IA/ML | Referencial teorico (escalas e construtos) |
+| `S0020`, `S0058`, `S0227`, `S0532`, `S0561`, `S0567`, `S0555`, `S0505`, `S0500`, `S0120`, `S0091`, `S0145`, `S0154` | `EC2` - Estudos psicometricos/estatisticos (LCA/LPA/LCCA/MDA/GLM) sobre absenteismo/recusa sem ML supervisionado preditivo | Referencial teorico (perfis, escalas e construtos, ex.: `S0505` EBSA) |
+| `S0224` | `EC2` - Sistema piloto com regressao linear classica sem escalas clinicas nem ML implementado | Referencial teorico (EWS escolar) |
+| `S0007`, `S0048`, `S0062`, `S0114`, `S0133`, `S0153`, `S0285`, `S0659`, `S0702` | `EC2` - Desfecho fora de escopo (ensino superior, saude/tabaco/WHO-5, rendimento academico ou dropout puramente socioeconomico/academico sem absenteismo/socioemocional) | N/A |
 | `S0199` | `EC3` - Duplicata tardia de `S0183` | N/A |
 | `S0203` | `EC2` - Fora de escopo (relato de caso clinico) | N/A |
 | `S0001`, `S0018`, `S0019`, `S0033`, `S0042`, `S0053`, `S0080`, `S0105`, `S0113`, `S0136`, `S0152`, `S0183`, `S0202`, `S0214` | `EC2` - Fora de escopo (sem aplicacao de IA/ML ou escala psicometrica) | N/A |
-| `S0133` | `EC2` - Dataset de Ensino Superior (UCI), fora da populacao-alvo (educacao basica) | N/A |
-| `S0153` | `EC2` - Nao mensura desfecho de absenteismo ou recusa escolar | N/A |
 | `S0502`, `S0548`, `S0662`, `S0822`, `S1064`, `S1260`, `S0008`, `S0021`, `S0022`, `S0037`, `S0060`, `S0065`, `S0077` | `Sem Acesso` - Texto completo indisponivel / sem acesso institucional (13 estudos) | N/A |
 | `S0064`, `S0067`, `S0082`, `S0093`, `S0108`, `S0117`, `S0127`, `S0135`, `S0137`, `S0139`, `S0140`, `S0143`, `S0156`, `S0160`, `S0162`, `S0163`, `S0168`, `S0184`, `S0194` | `EC2` - Fora de escopo na verificacao de elegibilidade para obtencao dos PDFs (19 estudos) | N/A |
